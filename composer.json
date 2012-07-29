@@ -1,0 +1,27 @@
+{
+    "name": "printo/printo",
+    "type": "library",
+    "description": "Display mind-map style object grapgh.",
+    "keywords": ["debug", "object"],
+    "homepage": "https://github.com/koriym/print_o",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Akihito Koriyama",
+            "email": "akihito.koriyama@gmail.com",
+            "homepage": "https://github.com/koriym"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "doctrine/orm": "dev-master",
+        "doctrine/dbal": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Printo": "src/"
+        }
+    }
+}
