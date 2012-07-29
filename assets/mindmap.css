@@ -30,7 +30,7 @@ a {color:#1C609F;text-decoration:none;/*color:#004784;*/}
 		top:10px;
 		left:10px;
 		font-family:verdana;
-		font-size:18px;
+		font-size:12px;
 		color:#003258;
 		background:#C1D1E0;
         opacity:0.85;
@@ -74,3 +74,4 @@ a {color:#1C609F;text-decoration:none;/*color:#004784;*/}
     .ui-draggable {
         position:absolute;
     }
+}
