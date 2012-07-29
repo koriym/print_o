@@ -37,7 +37,7 @@
             maxForce: 0.1,
             showSublines: true,
             updateDisplayAfterNthIteration: 500,
-            showProgressive: false
+            showProgressive: true
         },options);
     
         // Define all Node related functions.
