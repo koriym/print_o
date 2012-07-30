@@ -1,17 +1,17 @@
 <?php
 require dirname(__DIR__) . '/src.php';
 
-class firstPrinto
+class FirstGraph
 {
     public function __construct()
     {
-        $this->a = new stdClass;
-        $this->b = new sub;
-        $this->c = ['one', 'two'];
+        $this->message = 'Hello, Object graph !';
+        $this->data = ['one', 'two', 'three'];
+        $this->service = new Service;
     }
 }
 
-class sub
+class Service
 {
     public $a1 = 1;
     public $a2 = 2.1;
@@ -26,5 +26,5 @@ class sub
     }
 }
 
-$obj = new firstPrinto;
+$obj = new FirstGraph;
 print_o($obj);
