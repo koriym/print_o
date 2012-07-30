@@ -4,7 +4,8 @@
 ### Requirements
  * PHP 5.4+
 
-### Quick Usage
+### Usage
+
 ```php
 <?php
 require '/path/to/print_o/src.php';
@@ -12,9 +13,11 @@ require '/path/to/print_o/src.php';
 print_o($obj);
 ```
 
-### Demo
+### Live demo
 
- * [Doctrine annotation reader](http://koriym.github.com/print_o/sample/02-doctrine-anno.html)
+ * [data/sample-01](http://koriym.github.com/print_o/sample/01-sample.html) - [source code](https://github.com/koriym/print_o/blob/master/data/sample-01.php)
+ * [Doctrine annotation reader object](http://koriym.github.com/print_o/sample/02-doctrine-anno.html)
+ * [Symfony commandline application object](http://koriym.github.com/print_o/sample/02-doctrine-anno.html)
 
 Dependencies
 ------------
