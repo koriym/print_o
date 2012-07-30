@@ -1,5 +1,5 @@
 # print_o
-## A object graph visualizer for PHP
+## An object graph visualizer for PHP
 
 ### What is object graph ?
 
