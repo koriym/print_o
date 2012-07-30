@@ -1,4 +1,4 @@
-# Printo
+# print_o
 ## Display mind-map style object graph
 
 ### Requirements
