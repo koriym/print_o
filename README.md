@@ -14,6 +14,9 @@
 
 ### Usage
 
+print_o() displays information about a object graph and variable in a way that's readable by humans.
+print_o() also show protected and private properties of objects with PHP 5. Static class members will be shown unlike print_r, var_dump.
+
 ```php
 <?php
 require '/path/to/print_o/src.php';
@@ -21,6 +24,8 @@ require '/path/to/print_o/src.php';
 ...
 print_o($obj);
 ```
+
+Try click, double click, or drag object or variable.
 
 ### Live demo
 
