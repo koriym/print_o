@@ -25,7 +25,7 @@ require '/path/to/print_o/src.php';
 print_o($obj);
 ```
 
-Try click, double click, or drag object or variable.
+Try click, double click, or drag.
 
 ### Live demo
 
