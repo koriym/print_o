@@ -27,4 +27,4 @@ class Service
 }
 
 $obj = new FirstGraph;
-print_o($obj);
+print_r($obj);
