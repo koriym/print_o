@@ -6,7 +6,7 @@ $html = <<<EOT
   <!-- Kenneth Kufluk 2008/09/10 -->
   <title>{$rootName}</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <base href="http://koriym.github.com/print_o/assets/">
+  <base href="{$assetsPath}">
   <link href="/assets/css/bootstrap.css" rel="stylesheet" />
   <link href="debuglib.css" rel="stylesheet" />
   <link href="mindmap.css" rel="stylesheet" />
@@ -15,14 +15,9 @@ $html = <<<EOT
   <!-- Raphael for SVG support (won't work on android) -->
   <script type="text/javascript" src="raphael-min.js"></script>
   <script type="text/javascript" src="mindmap.js"></script>
-  <script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
-        $("#js-mindmap").mindmap({
-            showSublines: false,
-            canvasError: "alert",
-            mapArea: {x:-1, y:-1}
-        });
+        $("#js-mindmap").mindmap({$config});
     });
 	</script>
 </head>

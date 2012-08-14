@@ -17,17 +17,38 @@ use RuntimeException;
  * Printo
  *
  * @package Printo
- * 
+ *
  * @author Akihito Koriyama (@koriym)
  */
 class Printo
 {
+    const IS_OBJ = true;
+    const IS_NOT_OBJ = false;
+
+    private static $config = [
+        'assetsPath' => 'http://koriym.github.com/print_o/assets/',
+        'showProgressive' => false,
+        'showSublines' => false,
+        'canvasError' => "alert",
+        'mapArea' => ['x'=> -1, 'y'=> -1]
+    ];
+
     /**
      * Loadeed class
-     * 
+     *
      * @var array
      */
     private $classes = [];
+
+    /**
+     * Set config
+     *
+     * @param array $config
+     */
+    public static function init(array $config)
+    {
+        self::$config = array_merge(self::$config, $config);
+    }
 
     /**
      * @param object $object
@@ -46,7 +67,7 @@ class Printo
      *
      * @return string
      */
-    public function makeData($object)
+    private function makeData($object)
     {
         $data = [];
         $props = (new \ReflectionObject($object))->getProperties();
@@ -59,16 +80,16 @@ class Printo
                 $class = get_class($value);
                 $loaded = in_array($class,  $this->classes);
                 if ($loaded) {
-                    $data["@{$name}"] = ["@{$name}", $value];
+                    $data["@{$name}"] = ["@{$name}", $value, self::IS_OBJ];
                 } else {
                     $this->classes[] = $class;
                     $child = $this->makeData($value);
                     $hasChild = ($child !== []);
-                    $data["({$class}) {$name}"] = $hasChild ? [$child, $value] : [$name, $value];
+                    $data["({$class}) {$name}"] = $hasChild ? [$child, $value, self::IS_OBJ] : [$name, $value, self::IS_OBJ];
                 }
             } else {
                 $value = $prop->getValue($object);
-                $data[$name] = ["($class) {$name}", $value];
+                $data[$name] = ["($class) {$name}", $value, self::IS_NOT_OBJ];
             }
         }
         return $data;
@@ -78,12 +99,13 @@ class Printo
     {
         $li = '';
         foreach ($data as $key => $val) {
-            list($element, $value) = $val;
+            list($element, $value, $isObject) = $val;
             $varId = md5(print_r($element, true));
             $this->vars[$varId] = $value;
+            $objClass = $isObject ? ' type="object"' : '';
             if (is_array($element)) {
                 //                $open = "<li><a href=\"#\" id=\"{$varId}\">{$key}</a>";
-                $open = "<li id=\"{$varId}\">{$key}";
+                $open = "<li id=\"{$varId}\" $objClass>{$key}";
                 $list = '<ul>' . $this->makeString($element) . '</ul>';
                 $close = '</li>';
                 $li .= $open . $list . $close;
@@ -116,6 +138,7 @@ class Printo
     public function __toString()
     {
         try {
+            $assetsPath = self::$config['assetsPath'];
             $rootName = get_class($this->object);
             $data = $this->makeData($this->object);
             $list = $this->makeString($data);
@@ -124,6 +147,7 @@ class Printo
             $list = "<li>{$rootName}<ul>{$list}</ul></li>";
             // vars
             $list .= "<span style=\"visibility:hidden;\">{$vars}</span>";
+            $config = json_encode(self::$config);
             $html = require __DIR__ . '/html.php';
             return $html;
         } catch (Exception $e) {

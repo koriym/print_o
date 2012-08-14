@@ -1,0 +1,3 @@
+[submodule "gh-pages"]
+	path = gh-pages
+	url = git@github.com:koriym/print_o.git
