@@ -36,8 +36,8 @@
             minSpeed: 0.15,
             maxForce: 0.1,
             showSublines: true,
-            updateDisplayAfterNthIteration: 5000000000000000000,
-            showProgressive: false
+            updateDisplayAfterNthIteration: 500,
+            showProgressive: true
         },options);
     
         // Define all Node related functions.
@@ -63,8 +63,12 @@
             this.count = 0;
             
             this.el.draggable();
-            this.el.css('position','absolute');        
-    
+            this.el.css('position','absolute');    
+            
+            // add object style
+            if (this.el.attr('type') != 'object') {
+            	this.el.css('opacity', 0.33);
+            }
             var thisnode = this;
             this.el.click(function(){
             	if(obj.activeNode === thisnode){
@@ -414,7 +418,6 @@
                     var rel = $(this).attr('rel');
                     var currentNode = $(this).parent()[0].mindmapNode;
                     $.each(rel.split(' '), function(index) {
-//                        console.log(this);
                         var parentNode = $('#'+this).parent()[0].mindmapNode;
                         var lineno = lines.length;
                         lines[lineno] = new Line(obj, lineno, currentNode, parentNode);
