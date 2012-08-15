@@ -2,7 +2,7 @@
     "name": "printo/printo",
     "type": "library",
     "description": "An object graph visualizer.",
-    "version": "0.1",
+    "version": "0.1.0-dev",
     "keywords": ["debug", "object"],
     "homepage": "https://github.com/koriym/print_o",
     "license": "BSD-3-Clause",
