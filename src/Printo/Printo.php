@@ -27,7 +27,7 @@ class Printo
 
     private static $config = [
         'assetsPath' => 'http://koriym.github.com/print_o/assets/',
-        'showProgressive' => false,
+        'showProgressive' => true,
         'showSublines' => false,
         'canvasError' => "alert",
         'mapArea' => ['x'=> -1, 'y'=> -1]
