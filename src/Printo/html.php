@@ -7,7 +7,7 @@ $html = <<<EOT
   <title>{$rootName}</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <base href="{$assetsPath}">
-  <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="//twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" />
   <link href="debuglib.css" rel="stylesheet" />
   <link href="mindmap.css" rel="stylesheet" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
