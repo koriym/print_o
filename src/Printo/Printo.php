@@ -18,7 +18,7 @@ use RuntimeException;
  *
  * @package Printo
  *
- * @author Akihito Koriyama (@koriym)
+ * @author  Akihito Koriyama (@koriym)
  */
 class Printo
 {
@@ -30,15 +30,15 @@ class Printo
         'showProgressive' => true,
         'showSublines' => false,
         'canvasError' => "alert",
-        'mapArea' => ['x'=> -1, 'y'=> -1]
+        'mapArea' => ['x' => -1, 'y' => -1]
     ];
 
     /**
-     * Loadeed class
+     * Loaded
      *
-     * @var array
+     * @var \SplObjectStorage
      */
-    private $classes = [];
+    private $storage;
 
     /**
      * Set config
@@ -55,10 +55,11 @@ class Printo
      */
     public function __construct($object)
     {
-        if (! is_object($object)) {
+        if (!is_object($object)) {
             throw new RuntimeException('Object only: ' . gettype($object));
         }
         $this->object = $object;
+        $this->storage = new \SplObjectStorage;
     }
 
     /**
@@ -67,7 +68,7 @@ class Printo
      *
      * @return string
      */
-    private function makeData($object)
+    private function makeData(&$object, $nest = 0)
     {
         $data = [];
         $props = (new \ReflectionObject($object))->getProperties();
@@ -75,23 +76,36 @@ class Printo
             $prop->setAccessible(true);
             $value = $prop->getValue($object);
             $name = $prop->name;
-            $class = gettype($prop->getValue($object));
             if (is_object($value)) {
                 $class = get_class($value);
-                $loaded = in_array($class,  $this->classes);
-                if ($loaded) {
+                $loaded = $this->storage->contains($value);
+                if ($loaded === true) {
                     $data["@{$name}"] = ["@{$name}", $value, self::IS_OBJ];
+                } elseif($nest > 500){
+                    $data[">{$name}"] = [">{$name}", $value, self::IS_OBJ];
                 } else {
-                    $this->classes[] = $class;
-                    $child = $this->makeData($value);
+                    $this->storage->attach($value);
+                    $nest++;
+                    $child = $this->makeData($value, $nest);
+                    $nest = 0;
                     $hasChild = ($child !== []);
-                    $data["({$class}) {$name}"] = $hasChild ? [$child, $value, self::IS_OBJ] : [$name, $value, self::IS_OBJ];
+                    $data["({$class}) {$name}"] = $hasChild ? [
+                        $child,
+                        $value,
+                        self::IS_OBJ
+                    ] : [
+                        $name,
+                        $value,
+                        self::IS_OBJ
+                    ];
                 }
             } else {
                 $value = $prop->getValue($object);
-                $data[$name] = ["($class) {$name}", $value, self::IS_NOT_OBJ];
+                $type = gettype($value);
+                $data[$name] = ["($type) {$name}", $value, self::IS_NOT_OBJ];
             }
         }
+
         return $data;
     }
 
@@ -100,12 +114,12 @@ class Printo
         $li = '';
         foreach ($data as $key => $val) {
             list($element, $value, $isObject) = $val;
-            $varId = md5(print_r($element, true));
+            $varId = md5(serialize($element));
             $this->vars[$varId] = $value;
             $objClass = $isObject ? ' type="object"' : '';
             if (is_array($element)) {
                 //                $open = "<li><a href=\"#\" id=\"{$varId}\">{$key}</a>";
-                $open = "<li id=\"{$varId}\" $objClass>{$key}";
+                $open = "<li id=\"{$varId}\" {$objClass}>{$key}";
                 $list = '<ul>' . $this->makeString($element) . '</ul>';
                 $close = '</li>';
                 $li .= $open . $list . $close;
@@ -114,6 +128,7 @@ class Printo
                 $li .= "<li id=\"{$varId}\">{$element}\n";
             }
         }
+
         return $li;
     }
 
@@ -126,9 +141,24 @@ class Printo
     {
         $div = '';
         foreach ($this->vars as $id => $var) {
-            $varView = print_a($var, 'return:1;');
-            $div .= "<div id=\"data_{$id}\">$varView</div>";
+            if (is_object($var) || is_array($var)) {
+                // these does not work -- can't detect recursion and cause excess memory error
+                // $varView = print_a($var, 'return:1; show_objects:false; avoid@:1');
+                // $varView = print_r($var, true);
+
+                // work - but hard to understand
+                // $varView = serialize($var);
+
+                ini_set('xdebug.var_display_max_depth', 2);
+                ob_start();
+                var_dump($var);
+                $varView = ob_get_clean();
+            } else {
+                $varView = print_a($var, 'return:1;');
+            }
+            $div .= "<div id=\"data_{$id}\"><pre>$varView</pre></div>";
         }
+
         return $div;
     }
 
@@ -149,6 +179,7 @@ class Printo
             $list .= "<span style=\"visibility:hidden;\">{$vars}</span>";
             $config = json_encode(self::$config);
             $html = require __DIR__ . '/html.php';
+
             return $html;
         } catch (Exception $e) {
             error_log($e);
