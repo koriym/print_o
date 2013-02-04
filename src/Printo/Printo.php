@@ -159,7 +159,8 @@ class Printo
                 // work - but hard to understand
                 // $varView = serialize($var);
 
-                ini_set('xdebug.var_display_max_depth', 2);
+                $level = isset($_GET['print_o_level']) ? $_GET['print_o_level'] : 2;
+                ini_set('xdebug.var_display_max_depth', $level);
                 ob_start();
                 var_dump($var);
                 $varView = ob_get_clean();
