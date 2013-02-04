@@ -50,8 +50,11 @@ class Printo
         self::$config = array_merge(self::$config, $config);
     }
 
+
     /**
-     * @param object $object
+     * @param $object
+     *
+     * @throws RuntimeException
      */
     public function __construct($object)
     {
@@ -63,10 +66,17 @@ class Printo
     }
 
     /**
+     * @var array
+     */
+    private $vars;
+
+    /**
+     * make tree data
      *
-     * @param object $object
+     * @param object &$object
+     * @param int     $nest
      *
-     * @return string
+     * @return array
      */
     private function makeData(&$object, $nest = 0)
     {
