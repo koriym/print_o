@@ -2,27 +2,25 @@
 /**
  * Printo
  *
+ * @package Printo
  * @license http://opensource.org/licenses/bsd-license.php BSD
- *
  */
 namespace Printo;
 
-require_once __DIR__ . '/debuglib/debuglib.php';
-
 use DbugL;
 use Exception;
+use ReflectionObject;
 use RuntimeException;
-
 /**
  * Printo
  *
  * @package Printo
- *
- * @author  Akihito Koriyama (@koriym)
+ * @author  Akihito Koriyama <akihito.koriyama@gmail.com>
  */
 class Printo
 {
     const IS_OBJ = true;
+
     const IS_NOT_OBJ = false;
 
     private static $config = [
@@ -41,15 +39,9 @@ class Printo
     private $storage;
 
     /**
-     * Set config
-     *
-     * @param array $config
+     * @var array
      */
-    public static function init(array $config)
-    {
-        self::$config = array_merge(self::$config, $config);
-    }
-
+    private $vars;
 
     /**
      * @param $object
@@ -66,22 +58,48 @@ class Printo
     }
 
     /**
-     * @var array
+     * Set config
+     *
+     * @param array $config
      */
-    private $vars;
+    public static function init(array $config)
+    {
+        self::$config = array_merge(self::$config, $config);
+    }
+
+    /** @noinspection PhpInconsistentReturnPointsInspection */
+    public function __toString()
+    {
+        try {
+            $rootName = get_class($this->object);
+            $data = $this->makeData($this->object);
+            $list = $this->makeString($data);
+            $vars = $this->getVarDivs();
+            // object list
+            $list = "<li>{$rootName}<ul>{$list}</ul></li>";
+            // vars
+            /** @noinspection PhpUnusedLocalVariableInspection */
+            $list .= "<span style=\"visibility:hidden;\">{$vars}</span>";
+            $html = require __DIR__ . '/html.php';
+
+            return $html;
+        } catch (Exception $e) {
+            error_log($e);
+        }
+    }
 
     /**
      * make tree data
      *
      * @param object &$object
-     * @param int     $nest
+     * @param int    $nest
      *
      * @return array
      */
     private function makeData(&$object, $nest = 0)
     {
         $data = [];
-        $props = (new \ReflectionObject($object))->getProperties();
+        $props = (new ReflectionObject($object))->getProperties();
         foreach ($props as $prop) {
             $prop->setAccessible(true);
             $value = $prop->getValue($object);
@@ -91,7 +109,7 @@ class Printo
                 $loaded = $this->storage->contains($value);
                 if ($loaded === true) {
                     $data["@{$name}"] = ["@{$name}", $value, self::IS_OBJ];
-                } elseif($nest > 500){
+                } elseif ($nest > 500) {
                     $data[">{$name}"] = [">{$name}", $value, self::IS_OBJ];
                 } else {
                     $this->storage->attach($value);
@@ -171,29 +189,5 @@ class Printo
         }
 
         return $div;
-    }
-
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        try {
-            $assetsPath = self::$config['assetsPath'];
-            $rootName = get_class($this->object);
-            $data = $this->makeData($this->object);
-            $list = $this->makeString($data);
-            $vars = $this->getVarDivs();
-            // object list
-            $list = "<li>{$rootName}<ul>{$list}</ul></li>";
-            // vars
-            $list .= "<span style=\"visibility:hidden;\">{$vars}</span>";
-            $config = json_encode(self::$config);
-            $html = require __DIR__ . '/html.php';
-
-            return $html;
-        } catch (Exception $e) {
-            error_log($e);
-        }
     }
 }
