@@ -1,2 +1,2 @@
-php dev.php > dev.html
-open dev.html
+php 01-basic-sample.php > out.html
+open out.html
