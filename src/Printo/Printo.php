@@ -79,6 +79,10 @@ class Printo
             $list = "<li>{$rootName}<ul>{$list}</ul></li>";
             // vars
             /** @noinspection PhpUnusedLocalVariableInspection */
+            $config = json_encode(self::$config);
+            /** @noinspection PhpUnusedLocalVariableInspection */
+            $assetsPath = self::$config['assetsPath'];
+            /** @noinspection PhpUnusedLocalVariableInspection */
             $list .= "<span style=\"visibility:hidden;\">{$vars}</span>";
             $html = require __DIR__ . '/html.php';
 

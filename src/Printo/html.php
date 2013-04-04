@@ -3,7 +3,7 @@ $html = <<<EOT
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Kenneth Kufluk 2008/09/10 -->
+  <!-- @see https://github.com/kennethkufluk/js-mindmap -->
   <title>{$rootName}</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <base href="{$assetsPath}">
