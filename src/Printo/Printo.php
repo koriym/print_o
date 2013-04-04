@@ -175,17 +175,17 @@ class Printo
         foreach ($this->vars as $id => $var) {
             if (is_object($var) || is_array($var)) {
                 // these does not work -- can't detect recursion and cause excess memory error
-                // $varView = print_a($var, 'return:1; show_objects:false; avoid@:1');
+                 $varView = print_a($var, 'return:1; show_objects:false; avoid@:1');
                 // $varView = print_r($var, true);
 
                 // work - but hard to understand
                 // $varView = serialize($var);
 
-                $level = isset($_GET['print_o_level']) ? $_GET['print_o_level'] : 2;
-                ini_set('xdebug.var_display_max_depth', $level);
-                ob_start();
-                var_dump($var);
-                $varView = ob_get_clean();
+//                $level = isset($_GET['print_o_level']) ? $_GET['print_o_level'] : 2;
+//                ini_set('xdebug.var_display_max_depth', $level);
+//                ob_start();
+//                var_dump($var);
+//                $varView = ob_get_clean();
             } else {
                 $varView = print_a($var, 'return:1;');
             }
