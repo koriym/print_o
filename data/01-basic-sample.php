@@ -16,6 +16,7 @@ class Service
     public $a1 = 1;
     public $a2 = 2.1;
     public $a3 = 'hello';
+    public $global;
     protected $time;
     private $server;
     
@@ -23,6 +24,7 @@ class Service
     {
         $this->time = new DateTime;
         $this->server = $_SERVER;
+        $this->global = $GLOBALS;
     }
 }
 
