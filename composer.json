@@ -15,9 +15,12 @@
         "php": ">=5.4.0"
     },
     "autoload": {
-        "classmap": [
-            "src/Printo/Printo.php",
-            "src/Printo/print_o.php"
+        "psr-0":{
+            "Printo\\":"src/"
+        },
+        "files": [
+            "src/print_o.php",
+            "libs/debuglib/debuglib.php"
         ]
     }
 }
