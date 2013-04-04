@@ -625,7 +625,11 @@ else:
 				} elseif(is_array($value) && !empty($value)) {
 
 					$html .= self::_value_s();
-					$this->print_a($value, $html, $iter);
+                    if (strpos(print_r($value, 1), '*RECURSION*') !== FALSE) {
+                        $html .= '*RECURSION*';
+                    } else {
+                        $this->print_a($value, $html, $iter);
+                    }
 					$html .= self::_value_e();
 
 				} elseif(is_object($value)) {
