@@ -19,8 +19,7 @@
             "Printo\\":"src/"
         },
         "files": [
-            "src/print_o.php",
-            "libs/debuglib/debuglib.php"
+            "src/print_o.php"
         ]
     }
 }
