@@ -11,8 +11,13 @@ padding:20px;
 	}
 
 a {color:#1C609F;text-decoration:none;/*color:#004784;*/}
-	a:hover {color: #990000;background-color:#edd6d7;}
-	a img {border:none;}
+a:hover {color: #990000;background-color:#edd6d7;}
+a img {border:none;}
+
+#show-var {
+    background-color: white;
+    opacity:0.75;
+}
 
 .credit {
 	font-size:80%;
