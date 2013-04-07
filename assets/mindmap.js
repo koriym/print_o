@@ -70,14 +70,12 @@
             	this.el.css('opacity', 0.33);
             }
             var thisnode = this;
+            this.el.hover(function(){
+                var id = $(this).attr("id");
+                var val = $("#data_" + id).children().html();
+                $().showVars(val);
+            });
             this.el.click(function(){
-            	if(obj.activeNode === thisnode){
-            		var id = $(this).attr("id");
-            		var val = $("#data_" + id).children().html();
-            		$().showVars(val);
-//            		window.open(href);
-//                    return false;
-            	}
                 if (obj.activeNode) obj.activeNode.el.removeClass('active');
                 obj.activeNode = thisnode;
                 obj.activeNode.el.addClass('active');
