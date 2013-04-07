@@ -22,7 +22,7 @@ $html = <<<EOT
 	</script>
 </head>
 <body>
-<p style="opacity:0.75;" id="show-var"></p>
+<div id="show-var"></div>
 <p class="credit"></p>
 	<div id="js-mindmap">
 	<ul id="navigation">
