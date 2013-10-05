@@ -1,0 +1,1150 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- @see https://github.com/kennethkufluk/js-mindmap -->
+  <title>Sandbox\App</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <base href="http://koriym.github.com/print_o/assets/">
+  <link href="//twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="debuglib.css" rel="stylesheet" />
+  <link href="mindmap.css" rel="stylesheet" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js" type="text/javascript"></script>
+  <!-- Raphael for SVG support (won't work on android) -->
+  <script type="text/javascript" src="raphael-min.js"></script>
+  <script type="text/javascript" src="mindmap.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+        $("#js-mindmap").mindmap({"assetsPath":"http:\/\/koriym.github.com\/print_o\/assets\/","showProgressive":false,"showSublines":false,"canvasError":"alert","mapArea":{"x":-1,"y":-1}});
+    });
+	</script>
+</head>
+<body>
+<div id="show-var"></div>
+<p class="credit"></p>
+	<div id="js-mindmap">
+	<ul id="navigation">
+<li>Sandbox\App<ul><li id="7eec3694b7511faf97f56d9ff345c05b"  type="object">(Ray\Di\Injector) injector<ul><li id="ee18de36c2c507104683653d27c6e96a"  type="object">(Ray\Di\Config) config<ul><li id="d17af1e59d562c9c00f2de19e9f73c97"  type="object">(ArrayObject) params<ul><li id="156acedf4173a79099512661c7f710a9">(NULL) *
+</ul></li><li id="a6dcda61f2459070592605795ff2a332">(array) reflect
+<li id="d17af1e59d562c9c00f2de19e9f73c97"  type="object">(ArrayObject) setter<ul><li id="156acedf4173a79099512661c7f710a9">(NULL) *
+</ul></li><li id="db8524f730543f33917d734a196d9aff">(array) unified
+<li id="e3df3788f514f4eba5562926f4a6272a">(NULL) methodReflect
+<li id="65d21e70c8d3a5e3de5f9403174e5d2d"  type="object">(Ray\Di\Definition) definition<ul><li id="24180c5ef748a9dbfbfc88cca7d1404e">(array) defaults
+<li id="fb11eed0a8f63f8d7f90e6d9c6143117">(NULL) Scope
+<li id="60acfdf7268363da088c1a794404100e">(NULL) PostConstruct
+<li id="4905eaf9991112dc7c81c64e38c80ba5">(NULL) PreDestroy
+<li id="69c4a43ef2447cccadcc995fa6683240">(NULL) Inject
+<li id="270307c54af67011c0b019d1929146f9">(NULL) ImplementedBy
+<li id="60eaf4949cd888eeccf6fd3aa2785b90">(NULL) user
+<li id="629eec24341482850aed542c88f2d5a6">(NULL) optional
+<li id="156acedf4173a79099512661c7f710a9">(NULL) *
+<li id="67e845d0da354e5e9d31926b22f4d3ab">(NULL) BEAR\Package\Module\Cache\Interceptor\CacheLoader
+<li id="3c514c9edc56e4918c540be73b4fa658">(NULL) Guzzle\Cache\CacheAdapterInterface
+<li id="5fa4815de5dba79d1d815750fe84f5e0">(NULL) BEAR\Sunday\Module\Cache\CacheProvider
+<li id="b17db4972650efbe87aaa26556719d4a">(NULL) BEAR\Package\Module\Cache\Interceptor\CacheUpdater
+<li id="7103f178bad72d168d95c28b27db7e36">(NULL) BEAR\Package\Module\Database\Dbal\Interceptor\DbInjector
+<li id="750e1b36b0af71c4c5af731ceb3c7909">(NULL) Doctrine\Common\Annotations\AnnotationReader
+<li id="0b162cbcc39d9748cd2c429999ed9b77">(NULL) Doctrine\DBAL\Logging\DebugStack
+<li id="b70f27094d1b2ee4bac848c8e03e511d">(NULL) BEAR\Resource\SignalParamsInterface
+<li id="da595dd9383b936e828f3cb4fb01c324">(NULL) BEAR\Resource\SignalParam
+<li id="0612db32ef6aa818878617e51cebf4f6">(NULL) BEAR\Resource\Module\SignalProvider
+<li id="2398bedf52947135cf77a5d118c697da">(NULL) BEAR\Resource\Param
+<li id="b37f2f283dfd82afe3e0cadfaa147845">(NULL) Sandbox\Params\FakeTime
+<li id="ef29cb63e2df4b79e90377f4fa0d4b57">(NULL) Sandbox\Params\CurrentTime
+<li id="917dc08fbff9a55ae00d36cd5c026016">(NULL) BEAR\Package\Module\Resource\Interceptor\ResourceGraph
+<li id="240d3d67ae8da5c2fec45c088fab05fc">(NULL) BEAR\Resource\Resource
+<li id="7f794109fea5c7afe4cc52d381d1f7bf">(NULL) BEAR\Resource\Module\SchemeCollectionProvider
+<li id="26109504a79553785bbec2def57f8156">(NULL) BEAR\Resource\Factory
+<li id="e819892e3f48fd5c70006c5d9155d3fb">(NULL) BEAR\Resource\Invoker
+<li id="98757e10be883cc10c181e1c80665e6f">(NULL) BEAR\Resource\DevInvoker
+<li id="074bedfe9ab22a90d0011b0b82ea92d2">(NULL) BEAR\Resource\Linker
+<li id="bc268357bf891d33f4906b67b148d0ef">(NULL) BEAR\Sunday\Module\Code\CachedReaderProvider
+<li id="dbedc6177a4f93288ff9d751ad43ad6e">(NULL) Guzzle\Parser\UriTemplate\UriTemplate
+<li id="5c6d10e1c4ba92b3c5cb258f91d30129">(NULL) BEAR\Resource\NamedParams
+<li id="69d8076af50227ca258567bcfc6044e4">(NULL) BEAR\Sunday\Module\Resource\ResourceLoggerProvider
+<li id="59eb87b928c778b9358f0c16db96649b">(NULL) BEAR\Resource\LoggerInterface
+<li id="9147a80480153eebcc7696d363478612">(NULL) BEAR\Resource\Logger
+<li id="7584b5d49b0adc19d290d065acb37cf8">(NULL) BEAR\Package\Provide\ApplicationLogger\ResourceLog\WritersProvider
+<li id="bc71b611894f97b01fe2e8a8ec2b5bf5">(NULL) BEAR\Resource\Request
+<li id="2f58a0f5a9978a04be08f29ccec6507f">(NULL) BEAR\Resource\Anchor
+<li id="8a84eddae81b27258009d5dc88784e24">(NULL) Smarty_Internal_Data
+<li id="dad8d806cd3174d00ee5494b5b017019">(NULL) Smarty_Internal_TemplateBase
+<li id="b1863b3cf5ba13b23e2a539174e99c0d">(NULL) Smarty
+<li id="5f3d76d6347345fc37a5025223066671">(NULL) BEAR\Package\Provide\TemplateEngine\Smarty\SmartyProvider
+<li id="dc0d3d302bcadc7f5313182bd95d1353">(NULL) Sandbox\Interceptor\Checker
+<li id="a0086ce1c88ea3849aa3e793561bec37">(NULL) Sandbox\Interceptor\Form\BlogPost
+<li id="1f2f53e85bd55bfbc051e4ae0b8a2839">(NULL) Ray\Aop\NamedArgsInterface
+<li id="e49bd3ee3e3a8d2e3c0cb38d24fa46db">(NULL) Ray\Aop\NamedArgs
+<li id="2486155d49f68f1c8c73dc285232ac78">(NULL) Sandbox\Interceptor\Form\AuraContact
+<li id="0ef8ed746681d4d4e5efb658f337a080">(NULL) Aura\Input\AbstractInput
+<li id="dbc5181a079b529e60bd614be3928cf5">(NULL) Aura\Input\Fieldset
+<li id="3af0ff403799d58bf308a4872a5a5b09">(NULL) Aura\Input\Form
+<li id="4de9d6d649a42385429c4e08b007c896">(NULL) BEAR\Package\Module\Form\AuraForm\AuraFormProvider
+<li id="1d3a93f5344997d2710a458b68b4927f">(NULL) BEAR\Sunday\Extension\Application\AppInterface
+<li id="1369563674acc42e32a3d30bdfb2fa67">(NULL) BEAR\Package\Provide\Application\AbstractApp
+<li id="fa72bf3480eb88b2ada8b054d8428c60">(NULL) Sandbox\App
+<li id="45c8ac5f71f9131db30b4461c82b8e02">(NULL) BEAR\Package\Dev\Debug\ExceptionHandle\ExceptionHandler
+<li id="0b4cbbdc26d8a90f4faa01417bb595f4">(NULL) BEAR\Sunday\Extension\WebResponse\ResponseInterface
+<li id="dede560db83f1ba386e2af99a1c55c75">(NULL) BEAR\Package\Provide\WebResponse\HttpFoundation
+<li id="b009512b7767dde299cd43072daeb3ae">(NULL) BEAR\Sunday\Extension\ConsoleOutput\ConsoleOutputInterface
+<li id="730bbfb8ad14493b652937fc9d7b4773">(NULL) BEAR\Package\Provide\ConsoleOutput\ConsoleOutput
+<li id="a1e4189eb7e711e349268966c736de1f">(NULL) BEAR\Package\Provide\ApplicationLogger\ApplicationLogger
+<li id="a9f9a201f89b718e23fd8d025aa2e216">(NULL) BEAR\Package\Module\Log\ZfLogModule\ZfLogProvider
+<li id="b61df41ed3d0cf12272d78e35cc1d20a">(NULL) BEAR\Resource\ResourceObject
+<li id="aafd854ec47fe27b685f5781a18232ff">(NULL) BEAR\Package\Dev\Debug\ExceptionHandle\ErrorPage
+<li id="5bd1286de46b718b1a0706eeb0206f02">(NULL) BEAR\Package\Provide\ResourceView\DevTemplateEngineRenderer
+<li id="a8e9fe83244c65ce7393070438e09718">(NULL) BEAR\Package\Provide\TemplateEngine\Smarty\SmartyAdapter
+<li id="867f26c6fccb95bdf7095f3001d26dbc">(NULL) BEAR\Sunday\Extension\Router\RouterInterface
+<li id="bbf7219d62c4deed9b8b1ea30b50d126">(NULL) BEAR\Package\Provide\Router\AuraRouter
+</ul></li><li id="dcc3d3bef97b66c5e6cd0da3ca397bca"  type="object">(Ray\Di\Annotation) annotation<ul><li id="ce529d554ee14553207c171ef911648e"  type="object">(Ray\Di\Definition) newDefinition<ul><li id="24180c5ef748a9dbfbfc88cca7d1404e">(array) defaults
+<li id="fb11eed0a8f63f8d7f90e6d9c6143117">(NULL) Scope
+<li id="60acfdf7268363da088c1a794404100e">(NULL) PostConstruct
+<li id="4905eaf9991112dc7c81c64e38c80ba5">(NULL) PreDestroy
+<li id="69c4a43ef2447cccadcc995fa6683240">(NULL) Inject
+<li id="270307c54af67011c0b019d1929146f9">(NULL) ImplementedBy
+<li id="60eaf4949cd888eeccf6fd3aa2785b90">(NULL) user
+<li id="629eec24341482850aed542c88f2d5a6">(NULL) optional
+</ul></li><li id="41f787611ce27469c363fedfd5688ad0"  type="object">(Ray\Di\Definition) definition<ul><li id="24180c5ef748a9dbfbfc88cca7d1404e">(array) defaults
+<li id="fb11eed0a8f63f8d7f90e6d9c6143117">(NULL) Scope
+<li id="60acfdf7268363da088c1a794404100e">(NULL) PostConstruct
+<li id="4905eaf9991112dc7c81c64e38c80ba5">(NULL) PreDestroy
+<li id="69c4a43ef2447cccadcc995fa6683240">(NULL) Inject
+<li id="270307c54af67011c0b019d1929146f9">(NULL) ImplementedBy
+<li id="60eaf4949cd888eeccf6fd3aa2785b90">(NULL) user
+<li id="629eec24341482850aed542c88f2d5a6">(NULL) optional
+<li id="82b6dcebef4f4b64ef25f94cb1796bf5">(NULL) by_method
+</ul></li><li id="a3a3d31ed0cd163addf5efc29930381b">(array) definitions
+<li id="8432488a9bec3956a7ead9b25104f949"  type="object">(Doctrine\Common\Annotations\AnnotationReader) reader<ul><li id="0fba9e53d66f76094f461ebc6a566250">(array) globalImports
+<li id="092df62fa32f27be7aac644dacb7087e">(array) globalIgnoredNames
+<li id="65ca27aba97fa5d8ad21264cef8bea8b"  type="object">(Doctrine\Common\Annotations\DocParser) parser<ul><li id="e2cce6fc6d07d37e4067f7954cc10c37">(array) classIdentifiers
+<li id="1a6f5aca3da455c7a93980cc62821f27"  type="object">(Doctrine\Common\Annotations\DocLexer) lexer<ul><li id="bb5beca1c6f98b8c182a6e61ad627e3c">(array) noCase
+<li id="59466542ba07227737c6cd3c32e0a01e">(array) withCase
+<li id="bc44707595d0d548e341f4db3adc5efa">(NULL) lookahead
+<li id="430ace81e4ae8cc2eefe4d8e9dea4e4c">(array) token
+</ul></li><li id="79599d338bf386924248d071b757720d">(integer) target
+<li id="3f805ffa595d31d4a2cac99634bbfcb8">(NULL) metadataParser
+<li id="085d50109cf2663c63587b98721fdef3">(boolean) isNestedAnnotation
+<li id="49aafdc65446218caa37daf81887548e">(array) imports
+<li id="71460e2acaf873abf0f546edd4b22b62">(array) classExists
+<li id="3ca6c39221627f411715a2013ee7223e">(boolean) ignoreNotImportedAnnotations
+<li id="4bb7a2029805813e24829bd31f63a2a8">(array) namespaces
+<li id="66a6126b80d0bb41742772c4e36363ca">(array) ignoredAnnotationNames
+<li id="3d659445954242a39d6189f7ed334dc4">(string) context
+<li id="3ffa381d0706b666789925b28101f3a0">(array) annotationMetadata
+<li id="97b36b4b4b1329a8900ea676a19fabec">(array) typeMap
+</ul></li><li id="532ca196d286e62ed5363fc5c8b7531d"  type="object">(Doctrine\Common\Annotations\DocParser) preParser<ul><li id="e2cce6fc6d07d37e4067f7954cc10c37">(array) classIdentifiers
+<li id="9e2fac3437f8cfe31c8dccf0aaba9d67"  type="object">(Doctrine\Common\Annotations\DocLexer) lexer<ul><li id="bb5beca1c6f98b8c182a6e61ad627e3c">(array) noCase
+<li id="59466542ba07227737c6cd3c32e0a01e">(array) withCase
+<li id="bc44707595d0d548e341f4db3adc5efa">(NULL) lookahead
+<li id="430ace81e4ae8cc2eefe4d8e9dea4e4c">(array) token
+</ul></li><li id="1f7f97a1e033da34983702f307eefb0e">(NULL) target
+<li id="3f805ffa595d31d4a2cac99634bbfcb8">(NULL) metadataParser
+<li id="085d50109cf2663c63587b98721fdef3">(boolean) isNestedAnnotation
+<li id="49aafdc65446218caa37daf81887548e">(array) imports
+<li id="71460e2acaf873abf0f546edd4b22b62">(array) classExists
+<li id="3ca6c39221627f411715a2013ee7223e">(boolean) ignoreNotImportedAnnotations
+<li id="4bb7a2029805813e24829bd31f63a2a8">(array) namespaces
+<li id="66a6126b80d0bb41742772c4e36363ca">(array) ignoredAnnotationNames
+<li id="3d659445954242a39d6189f7ed334dc4">(string) context
+<li id="3ffa381d0706b666789925b28101f3a0">(array) annotationMetadata
+<li id="97b36b4b4b1329a8900ea676a19fabec">(array) typeMap
+</ul></li><li id="d1e74426ffe3efd1cb6568e569a88201">phpParser
+<li id="49aafdc65446218caa37daf81887548e">(array) imports
+<li id="66a6126b80d0bb41742772c4e36363ca">(array) ignoredAnnotationNames
+</ul></li></ul></li></ul></li><li id="9e1b2662a4e86ee0a567fe27cf12d7f3"  type="object">(Ray\Di\Container) container<ul><li id="c1d5089dd4de9f812bc09be5d7206b6a"  type="object">(Ray\Di\Forge) forge<ul><li id="6a04182b1a6979187474debe81709084">@config
+</ul></li><li id="642686f7b4bd029323fd812aee2e493b">@params
+<li id="0d62e1b4f0e06f02e9505c7a0c05bd47">@setter
+<li id="1bac73faea250b076b418d4be88a863d">(array) defs
+<li id="7c432ae0c16a326dd4b177694377a7b5">(array) services
+<li id="7c2c50aef77a8f740e07371264401369">(boolean) locked
+</ul></li><li id="514953bc0589333e9a709ac68d67b077"  type="object">(Sandbox\Module\AppModule) module<ul><li id="6a356ba53f0ac9a5f20cf21d7fc52447">(NULL) config
+<li id="86b26ffc884f8bb4582ebac8fb29d2e6">(array) params
+<li id="9bd64d80bc52e67cec301f2757867952">(NULL) context
+<li id="72f75d0ebfd4589762a79980d51bc028"  type="object">(ArrayObject) bindings<ul><li id="1d3a93f5344997d2710a458b68b4927f">(NULL) BEAR\Sunday\Extension\Application\AppInterface
+<li id="6cf3fe718092ec1a6ac8aa55a85d9058">(NULL) BEAR\Sunday\Extension\ApplicationLogger\ApplicationLoggerInterface
+<li id="ea6b7a2975c145c4f563deb3555b4e6e">(NULL) BEAR\Resource\LogWriterInterface
+<li id="1be6d06d929224c0bb04554fcf8f550e">(NULL) Ray\Di\LoggerInterface
+<li id="0b4cbbdc26d8a90f4faa01417bb595f4">(NULL) BEAR\Sunday\Extension\WebResponse\ResponseInterface
+<li id="b009512b7767dde299cd43072daeb3ae">(NULL) BEAR\Sunday\Extension\ConsoleOutput\ConsoleOutputInterface
+<li id="867f26c6fccb95bdf7095f3001d26dbc">(NULL) BEAR\Sunday\Extension\Router\RouterInterface
+<li id="e3380dc1a8f91c43a4f901ace34c807d">(NULL) BEAR\Resource\RenderInterface
+<li id="33b7e33408dcc689f8c89bb27d89f501">(NULL) Guzzle\Log\LogAdapterInterface
+<li id="b61df41ed3d0cf12272d78e35cc1d20a">(NULL) BEAR\Resource\ResourceObject
+<li id="4d7ecee5b8bd1960d265b19ba3da12a5">(NULL) BEAR\Package\Dev\Debug\ExceptionHandle\ExceptionHandlerInterface
+<li id="1f2f53e85bd55bfbc051e4ae0b8a2839">(NULL) Ray\Aop\NamedArgsInterface
+<li id="689b017e227c6cfa2353603b1be048aa">(NULL) Guzzle\Cache\AbstractCacheAdapter
+<li id="92606396a48bb4c5d26a21ebcca07e63">(NULL) Doctrine\Common\Annotations\Reader
+<li id="59eb87b928c778b9358f0c16db96649b">(NULL) BEAR\Resource\LoggerInterface
+<li id="bdc45254be3a49ecc60ed34e6feed96a">(NULL) Aura\Di\ConfigInterface
+<li id="40da5bec4cbca01c3ec89dbac3a0c1d1">(NULL) Aura\Di\ContainerInterface
+<li id="421fb1a0c543a0e3a72a8a8e58ee3948">(NULL) Aura\Di\ForgeInterface
+<li id="148787f2ee308c2fbfdb8139cc9b62bd">(NULL) Ray\Di\InjectorInterface
+<li id="15e60a46e998c825da0cb427843893fc">(NULL) Ray\Di\AnnotationInterface
+<li id="dd8abbd13283bfe9d46f1600017ef513">(NULL) Ray\Aop\CompilerInterface
+<li id="467afa7b9cb0c15217b8887bfde9271f">(NULL) Ray\Aop\BindInterface
+<li id="57d3358f1c74c68100b72f89d9bf44d3">(NULL) Ray\Di\AbstractModule
+<li id="0c974a6341d225855079255918df3c26">(NULL) BEAR\Resource\ResourceInterface
+<li id="2c1890644ea07bb8d21c6c420a464341">(NULL) BEAR\Resource\InvokerInterface
+<li id="d0254e40f3760cd527f6555977c74b80">(NULL) BEAR\Resource\LinkerInterface
+<li id="15ccc3dc01db9640bafac46b775272fa">(NULL) BEAR\Resource\HrefInterface
+<li id="b70f27094d1b2ee4bac848c8e03e511d">(NULL) BEAR\Resource\SignalParamsInterface
+<li id="3f062307aeb6a1b2338a77814b19a7cb">(NULL) BEAR\Resource\FactoryInterface
+<li id="7b11bf6c85e678f69dae58476b73f9c7">(NULL) BEAR\Resource\SchemeCollectionInterface
+<li id="0eb612df7af25fef4e3d8cf1f972f949">(NULL) Aura\Signal\Manager
+<li id="6f7849784a83af07a956b3815dbed64b">(NULL) Guzzle\Parser\UriTemplate\UriTemplateInterface
+<li id="3c514c9edc56e4918c540be73b4fa658">(NULL) Guzzle\Cache\CacheAdapterInterface
+<li id="7b905163c4342fea169f67e2b43b9b44">(NULL) Doctrine\DBAL\Logging\SQLLogger
+<li id="3feec2630acc413e380ca42afa513f59">(NULL) BEAR\Sunday\Extension\TemplateEngine\TemplateEngineAdapterInterface
+<li id="b1863b3cf5ba13b23e2a539174e99c0d">(NULL) Smarty
+<li id="3af0ff403799d58bf308a4872a5a5b09">(NULL) Aura\Input\Form
+</ul></li><li id="5ce752b4816851619e64915c2fcdfd1f">(NULL) currentBinding
+<li id="72ab7a9ed10f38ebf81e11b6704830a4">(string) currentName
+<li id="5a240d4f54d73fd5e34c5300f18f8012">(array) scope
+<li id="08fdc32e4d1e41955cd5503b5278f784"  type="object">(ArrayObject) pointcuts<ul><li id="9f56203246ac43b3bd77a289055fa0be">(NULL) 524f42bdbf984
+<li id="8baeeba9d9361d4365348ba3df0cdb6f">(NULL) 524f42bdc12f8
+<li id="1103043941208532516fa1cf0ecf2e3e">(NULL) 524f42bdccea4
+<li id="56f12c3ae1a752befb4255311937abf7">(NULL) 524f42bdcd00c
+<li id="57aec8699432e41def81ff222a137705">(NULL) 524f42bdcd1c3
+<li id="839dccfec0ab22c492b686286826f7f5">(NULL) 524f42be2467c
+<li id="22bfb388e60ddb2f2c2541bc4c9187a6">(NULL) 524f42be3ebd2
+<li id="7e2d66b0bfc02651b7c6b63652d952b8">(NULL) 524f42be3f9be
+<li id="9af84cd0a40b2a619e840d14a396afb1">(NULL) 524f42be42a06
+<li id="07c757c0e80592f33412a24897bbc508">(NULL) 524f42be4d183
+</ul></li><li id="41b1f87345f9673cb54fa1237985710f">(NULL) dependencyInjector
+<li id="c185ce514ad68aa57cc289b3d8994631">(boolean) activated
+<li id="7d6df2bbd25299cf14ee15c79ec5922b">(array) modules
+</ul></li><li id="d63e755840f56627e7c81bb8d4a2907a">preDestroyObjects
+<li id="dc7a900d46503830e3d75782ce6921d0"  type="object">(Ray\Di\Logger) logger<ul><li id="7c3411b514cad844ba8c3b6b988a2c5a">(array) logMessages
+<li id="e130a98a7359f36d45158a8b86db2399">(array) logs
+<li id="b9d25b2be8371575187dd1b2da0c70d8">(array) hashes
+</ul></li><li id="a20a11087ff5fb2ae19c77565e6b81ee">(NULL) class
+<li id="16a4e41ed09bf287c69ac732dbba3d56">(NULL) cache
+<li id="72adb8e2eed77099692f4372d9f99f12"  type="object">(Ray\Aop\Compiler) compiler<ul><li id="6aa5b5dea78e94fc3f5206f72fe4a41d">(string) classDir
+<li id="84a231069410bc05ea853c710941123c"  type="object">(PHPParser_Parser) parser<ul><li id="137499114446b0a082b5a48055bb0c6a">(array) terminals
+<li id="805a51dd577e5653297883c5df052d29">(array) translate
+<li id="3594bdbc5172bc73bd840c36602d8c34">(array) yyaction
+<li id="4e9f9c880afe5877c3e72894b8432e8b">(array) yycheck
+<li id="9261310bbf85ae4673c1036cba13c308">(array) yybase
+<li id="e544cc7d17ce9707aa3c4c9a3ca89c8f">(array) yydefault
+<li id="bd038355d42f69e897c5ce61ffd1e017">(array) yygoto
+<li id="5a5a55bacb3cf7cc1e8043c01ffac4a2">(array) yygcheck
+<li id="e8920da15c2f4e7ddbd4fe137dc18430">(array) yygbase
+<li id="dca53fc2f68543f1537caab4c2e06204">(array) yygdefault
+<li id="33bfff3cf18024625eb6897dc7e132c3">(array) yylhs
+<li id="06d34340a0762bef433055a8daad565e">(array) yylen
+<li id="ddf27f5f33922b4793441a0029b2a84d">(NULL) yyval
+<li id="fd71d6aa52da4c8fcd5175f7246641f2">(NULL) yyastk
+<li id="60cb07f2d200b45fc8fc1cd24f675ec7">(NULL) stackPos
+<li id="61bc7ddc09544bed93ee0c0754a22c74"  type="object">(PHPParser_Lexer) lexer<ul><li id="eaf88117e07af61c02bf0c97a0f56a24">(NULL) code
+<li id="d2bcb4c63c75ee45f9d400b87e713cc3">(NULL) tokens
+<li id="06b725b81678baf39310c045a864713d">(NULL) pos
+<li id="b6f9f0a972cbfac691236d95e8578d76">(NULL) line
+<li id="95675051fc2793ea153cdc3e05967381">(array) tokenMap
+<li id="f277c81554b7a61912232ee761e45564">(array) dropTokens
+</ul></li></ul></li><li id="330eceb7960e11132635ee0d211f0900">factory
+<li id="2824c03699264b5b1453dd51beffbdb2"  type="object">(PHPParser_PrettyPrinter_Default) printer<ul><li id="751e423e6a5e3f8e02204af1930e92fc">(array) precedenceMap
+<li id="7d005107a4fc9ec0a63030e69863eb38">(string) noIndentToken
+<li id="58904ebb5f48c66299a68248f66add1f">(NULL) canUseSemicolonNamespaces
+</ul></li></ul></li><li id="287ec2a7de7a14a441f6a28713212828"  type="object">(Ray\Aop\Bind) bind<ul><li id="4f2d35f354846a8f201ec92d64ab6bd4">(array) annotation
+</ul></li></ul></li><li id="1d2de36ff36db872f94445e443f2f7d0"  type="object">(BEAR\Resource\Resource) resource<ul><li id="25b3a6ca22631679ff133a5d1c3a12c6"  type="object">(BEAR\Resource\Factory) factory<ul><li id="1eb7c64135231180641bd10a3213c463"  type="object">(BEAR\Resource\SchemeCollection) scheme<ul><li id="adb6fa6887ba0a13a2f87a738280cf5d">(NULL) scheme
+<li id="bd20256ea63164596115bf26aad3a67a">(NULL) host
+<li id="ccf5339042284433a3afe36a9eaa2a70">(NULL) page
+<li id="ca880e7c994997d42de28495d4dbf0e7">(NULL) app
+<li id="baa56e5204c798b9080da9809f43594b">(NULL) http
+</ul></li></ul></li><li id="c2963e95eb0a529ed5d456dcd9cbb7f5"  type="object">(BEAR\Resource\DevInvoker) invoker<ul><li id="232e93630119e68269a3b339d43d241a"  type="object">(BEAR\Resource\NamedParams) params<ul><li id="3df8f0e14397566506af9fc0391cd72c"  type="object">(BEAR\Resource\SignalParam) signalParam<ul><li id="80d1e6f585d23261ae8f94834f80abbc"  type="object">(Aura\Signal\Manager) signal<ul><li id="c070a3dab117960d1be70f5f2d25f1ed"  type="object">(Aura\Signal\HandlerFactory) handler_factory<ul><li id="86b26ffc884f8bb4582ebac8fb29d2e6">(array) params
+</ul></li><li id="67bb06fbfda9d2d7cc28986610087e44">(array) handlers
+<li id="bd8916a4bdf7ab48a0fe129cf9da37aa">result_collection
+<li id="ba5e34b6fba273edcd21b36e5c4e59b2"  type="object">(Aura\Signal\ResultFactory) result_factory<ul><li id="86b26ffc884f8bb4582ebac8fb29d2e6">(array) params
+</ul></li><li id="e741ceff552c58b3e1d45b6e49e7d490">results
+<li id="76c684d41dbc471a6c415f2728e34936">(array) sorted
+</ul></li><li id="a4d2bb2d6e61030dffe2826f034889fa"  type="object">(BEAR\Resource\Param) param<ul><li id="9131bb1ede2e088e1adcb8dbe96b2e9a">(NULL) invocation
+<li id="5836940dba234ae74c750e1b6f62bfb7">(NULL) parameter
+<li id="8e0e8d497b7c8b15b8ed0386b3687d63">(NULL) arg
+</ul></li></ul></li></ul></li></ul></li><li id="d2ff82142b6c26976b39372c3c5b2b1e">(NULL) request
+<li id="88ee1644d82879144d42dfce61d70005">requests
+<li id="40b11f8b7acd1f52a44229403d151f64"  type="object">(Guzzle\Cache\DoctrineCacheAdapter) cache<ul><li id="bf520887e0250e36b1109f69511c78df">cache
+</ul></li><li id="c764742f1cbf49537fc6e9e1eedf1ba1">(string) appName
+<li id="ff9b2a811bc27256614d58957601a44f"  type="object">(BEAR\Resource\Anchor) anchor<ul><li id="16688b8391aade9ae375ba6a898aa80a"  type="object">(Doctrine\Common\Annotations\AnnotationReader) reader<ul><li id="0fba9e53d66f76094f461ebc6a566250">(array) globalImports
+<li id="092df62fa32f27be7aac644dacb7087e">(array) globalIgnoredNames
+<li id="6ea0f3b8e39dad493fe8c9aac6537e6d"  type="object">(Doctrine\Common\Annotations\DocParser) parser<ul><li id="e2cce6fc6d07d37e4067f7954cc10c37">(array) classIdentifiers
+<li id="c2deed2bd9a9e8daa19d52d961777392"  type="object">(Doctrine\Common\Annotations\DocLexer) lexer<ul><li id="bb5beca1c6f98b8c182a6e61ad627e3c">(array) noCase
+<li id="59466542ba07227737c6cd3c32e0a01e">(array) withCase
+<li id="bc44707595d0d548e341f4db3adc5efa">(NULL) lookahead
+<li id="8e8f9c79ee7fd2aeb0f20847d25a8cd1">(NULL) token
+</ul></li><li id="1f7f97a1e033da34983702f307eefb0e">(NULL) target
+<li id="3f805ffa595d31d4a2cac99634bbfcb8">(NULL) metadataParser
+<li id="085d50109cf2663c63587b98721fdef3">(boolean) isNestedAnnotation
+<li id="49aafdc65446218caa37daf81887548e">(array) imports
+<li id="71460e2acaf873abf0f546edd4b22b62">(array) classExists
+<li id="3ca6c39221627f411715a2013ee7223e">(boolean) ignoreNotImportedAnnotations
+<li id="4bb7a2029805813e24829bd31f63a2a8">(array) namespaces
+<li id="66a6126b80d0bb41742772c4e36363ca">(array) ignoredAnnotationNames
+<li id="3d659445954242a39d6189f7ed334dc4">(string) context
+<li id="3ffa381d0706b666789925b28101f3a0">(array) annotationMetadata
+<li id="97b36b4b4b1329a8900ea676a19fabec">(array) typeMap
+</ul></li><li id="fdbab0b83e57d906274dbe366bd1facb"  type="object">(Doctrine\Common\Annotations\DocParser) preParser<ul><li id="e2cce6fc6d07d37e4067f7954cc10c37">(array) classIdentifiers
+<li id="c2deed2bd9a9e8daa19d52d961777392"  type="object">(Doctrine\Common\Annotations\DocLexer) lexer<ul><li id="bb5beca1c6f98b8c182a6e61ad627e3c">(array) noCase
+<li id="59466542ba07227737c6cd3c32e0a01e">(array) withCase
+<li id="bc44707595d0d548e341f4db3adc5efa">(NULL) lookahead
+<li id="8e8f9c79ee7fd2aeb0f20847d25a8cd1">(NULL) token
+</ul></li><li id="1f7f97a1e033da34983702f307eefb0e">(NULL) target
+<li id="3f805ffa595d31d4a2cac99634bbfcb8">(NULL) metadataParser
+<li id="085d50109cf2663c63587b98721fdef3">(boolean) isNestedAnnotation
+<li id="49aafdc65446218caa37daf81887548e">(array) imports
+<li id="71460e2acaf873abf0f546edd4b22b62">(array) classExists
+<li id="3ca6c39221627f411715a2013ee7223e">(boolean) ignoreNotImportedAnnotations
+<li id="4bb7a2029805813e24829bd31f63a2a8">(array) namespaces
+<li id="66a6126b80d0bb41742772c4e36363ca">(array) ignoredAnnotationNames
+<li id="3d659445954242a39d6189f7ed334dc4">(string) context
+<li id="3ffa381d0706b666789925b28101f3a0">(array) annotationMetadata
+<li id="97b36b4b4b1329a8900ea676a19fabec">(array) typeMap
+</ul></li><li id="d1e74426ffe3efd1cb6568e569a88201">phpParser
+<li id="49aafdc65446218caa37daf81887548e">(array) imports
+<li id="66a6126b80d0bb41742772c4e36363ca">(array) ignoredAnnotationNames
+</ul></li><li id="6f788964520d508e462db69e36a2d3a4"  type="object">(BEAR\Resource\Request) request<ul><li id="801323e460451e23c851262d92b746ae">(NULL) uri
+<li id="0453c4f6c0396b93872714739c4461c3">(NULL) ro
+<li id="010eb9eb7546404a5a5f3939216d3e4e">(string) method
+<li id="287450538abea9ad18ae33ba19296752">(array) query
+<li id="ff4d79259cabf0fce76dc3d36be06608">(array) options
+<li id="89cc8391298462dba8e34a1a5d6f6992">(NULL) in
+<li id="09710d3d5d4e144fba2c054462f69b01">(array) links
+<li id="bac84dccf153c127df972610edf6b07c">(NULL) result
+<li id="b49ded89f56063789eb64e1d9ea9aac7">(NULL) body
+<li id="43d6b3e8983c0b2fc32d49853861c363">@invoker
+</ul></li><li id="6eba1c8232b2bfde83049c829c04f6ca"  type="object">(Guzzle\Parser\UriTemplate\UriTemplate) uriTemplate<ul><li id="3c3f7e6aabf99b219dc919a377be26f6">(NULL) template
+<li id="44b677747d9b5a845f53a76b12d5d84c">(NULL) variables
+<li id="404d6a3323e22251cec203ddd7d7c8ee">(string) regex
+<li id="edb024c630878c1826ca5b98308e567a">(array) operatorHash
+<li id="c75b5de1c813e2a0a216ff2eec9e641c">(array) delims
+<li id="acecb2ff15f968fbf76bb396b9e382ed">(array) delimsPct
+</ul></li></ul></li><li id="6f788964520d508e462db69e36a2d3a4"  type="object">(BEAR\Resource\Request) newRequest<ul><li id="801323e460451e23c851262d92b746ae">(NULL) uri
+<li id="0453c4f6c0396b93872714739c4461c3">(NULL) ro
+<li id="010eb9eb7546404a5a5f3939216d3e4e">(string) method
+<li id="287450538abea9ad18ae33ba19296752">(array) query
+<li id="ff4d79259cabf0fce76dc3d36be06608">(array) options
+<li id="89cc8391298462dba8e34a1a5d6f6992">(NULL) in
+<li id="09710d3d5d4e144fba2c054462f69b01">(array) links
+<li id="bac84dccf153c127df972610edf6b07c">(NULL) result
+<li id="b49ded89f56063789eb64e1d9ea9aac7">(NULL) body
+<li id="43d6b3e8983c0b2fc32d49853861c363">@invoker
+</ul></li></ul></li><li id="c2a8c61c56628ee64b1245ad5179f12e"  type="object">(BEAR\Package\Provide\WebResponse\HttpFoundation) response<ul><li id="1cf020f4a82e07d085d1d7929ad8a1d1">(NULL) resource
+<li id="3f23f40f3a78767e0c278db8e4330e89">(NULL) response
+<li id="eaf88117e07af61c02bf0c97a0f56a24">(NULL) code
+<li id="35aec384261cc495cd41bc3f563e0ca9">(NULL) headers
+<li id="04a01bc90fd31480c67a325ce4faa01b">(NULL) view
+<li id="271fbd3e2c67427a21976d12a3c1ea22"  type="object">(BEAR\Package\Provide\ConsoleOutput\ConsoleOutput) consoleOutput<ul><li id="367202287ed43cc080d4e6cb68df4dc6">(boolean) enableOutput
+</ul></li><li id="5edd31ca5837209357d000291205036c"  type="object">(BEAR\Package\Provide\ApplicationLogger\ApplicationLogger) appLogger<ul><li id="4f8bf130567d8004212842c5a8b8cd31"  type="object">(BEAR\Resource\Logger) logger<ul><li id="e130a98a7359f36d45158a8b86db2399">(array) logs
+<li id="f22ae3f747b40cee91f097ab1c57e566"  type="object">(BEAR\Package\Provide\ApplicationLogger\ResourceLog\Writer\Collection) writer<ul><li id="0b82a5ce074119d335215fbed55eecd3">(array) writers
+</ul></li><li id="01f3b8c9733339e6ca4a94e8555e94b1"  type="object">(Any\Serializer\Serializer) serializer<ul><li id="4d52255a81f6c9248d047da854a6d8a8">(array) hash
+</ul></li></ul></li></ul></li><li id="1c8ec9852121445fb5ab5ab60c0eff22">(boolean) isCli
+<li id="f7d09c0329bf85a4941d912efa75799a"  type="object">(Guzzle\Log\Zf2LogAdapter) log<ul><li id="f81d47d95ac67d3500f25175d58e52ce"  type="object">(Zend\Log\Logger) log<ul><li id="def13b1a8e996e251b1a2780d9276f54">(array) errorPriorityMap
+<li id="d20eac541882d6475c51ffa23dd57c72">(boolean) registeredErrorHandler
+<li id="13d6286d3bc763db3adeee2d676a8be2">(boolean) registeredExceptionHandler
+<li id="e0036f1f20344a06ffae228126cfa50c">(array) priorities
+<li id="eb63ef6122d1c6045c5b073330fa5b16"  type="object">(Zend\Stdlib\SplPriorityQueue) writers<ul><li id="c5263ff27ffee53b87d50de18de5cf16">(integer) serial
+</ul></li><li id="eb63ef6122d1c6045c5b073330fa5b16"  type="object">(Zend\Stdlib\SplPriorityQueue) processors<ul><li id="c5263ff27ffee53b87d50de18de5cf16">(integer) serial
+</ul></li><li id="03e38573dc243dc9791acb4b10d0817f">(NULL) writerPlugins
+<li id="1dd4908c071c0170482b9e214ff05b36">(NULL) processorPlugins
+</ul></li></ul></li></ul></li><li id="dfc10afe33b7af65b9e482d8dd7aa384"  type="object">(BEAR\Package\Dev\Debug\ExceptionHandle\ExceptionHandler) exceptionHandler<ul><li id="3d8531efe0ad793390c07b2e5186d81b"  type="object">(BEAR\Package\Provide\WebResponse\HttpFoundation) response<ul><li id="1cf020f4a82e07d085d1d7929ad8a1d1">(NULL) resource
+<li id="3f23f40f3a78767e0c278db8e4330e89">(NULL) response
+<li id="eaf88117e07af61c02bf0c97a0f56a24">(NULL) code
+<li id="35aec384261cc495cd41bc3f563e0ca9">(NULL) headers
+<li id="04a01bc90fd31480c67a325ce4faa01b">(NULL) view
+<li id="271fbd3e2c67427a21976d12a3c1ea22"  type="object">(BEAR\Package\Provide\ConsoleOutput\ConsoleOutput) consoleOutput<ul><li id="367202287ed43cc080d4e6cb68df4dc6">(boolean) enableOutput
+</ul></li><li id="c05e38a58f2f9e9e456bb5290ae14344">@appLogger
+<li id="1c8ec9852121445fb5ab5ab60c0eff22">(boolean) isCli
+<li id="2088630fdc975293f5976865e0c07f00">@log
+</ul></li><li id="4d0a8817b89a25e3852dda3999cc103f"  type="object">(BEAR\Package\Dev\Debug\ExceptionHandle\ErrorPage) errorPage<ul><li id="25f4276f5379a4293cb8237c53b84412">(integer) code
+<li id="18c3ec9033a71af6416060a7c73d329b">(array) headers
+<li id="66af0a4c70c57173bf945439fb0bf170">(string) body
+<li id="587659b869d6b57fc8e12f18cde6396b">(string) uri
+<li id="04a01bc90fd31480c67a325ce4faa01b">(NULL) view
+<li id="09710d3d5d4e144fba2c054462f69b01">(array) links
+<li id="4eb94ccbeca955e8f531c366654062fa"  type="object">(BEAR\Package\Provide\ResourceView\DevTemplateEngineRenderer) renderer<ul><li id="0e4a01af61fa468c6c1aeb7c5cfa1768"  type="object">(BEAR\Package\Provide\TemplateEngine\Smarty\SmartyAdapter) templateEngineAdapter<ul><li id="1a4db86fad74ad1d1697f0687d5f383a"  type="object">(Smarty) smarty<ul><li id="ab42039bd19cde937b78d0088513c0b0">(array) global_tpl_vars
+<li id="36da172795aef3be18d5c58a9495e3f7">(NULL) _previous_error_handler
+<li id="a79b06df4ab76b33a66ddaec5b8973f1">(array) _muted_directories
+<li id="051f8e7e169b58111650db2767bced56">(boolean) _MBSTRING
+<li id="e4ea65073d7302cc4902a72ae6b3c3a1">(string) _CHARSET
+<li id="117a481821e3adf2579c0774dd837bb1">(string) _DATE_FORMAT
+<li id="b83dd312a05349a271b0c2542e515d9f">(string) _UTF8_MODIFIER
+<li id="71b0361a23bf49f12edb2eee18fa8161">(boolean) _IS_WINDOWS
+<li id="bdf918e4b2fc35ce4c9130c8c795d24f">(boolean) auto_literal
+<li id="6abd06fef76b9bf4526c4951840e586c">(boolean) error_unassigned
+<li id="b893c5920ff58595803afd43f73ea5c5">(boolean) use_include_path
+<li id="7a425c0ee79e0f0ed77b182e340b27ec">(array) template_dir
+<li id="d957ca2e07903f331d5d2bb3d48cd45c">(string) joined_template_dir
+<li id="1fba0f7f85fc542d8c91bec9103fc7d3">(string) joined_config_dir
+<li id="237bb5e567add47d2e16ebe1c386ea7e">(NULL) default_template_handler_func
+<li id="4b5ec83f18e1cb7c9faa9134e98b44c3">(NULL) default_config_handler_func
+<li id="1a87d096b95fbf5f7ac1ca3b032145ce">(NULL) default_plugin_handler_func
+<li id="1d5694f4c188bfeef6f273f9b2518651">(string) compile_dir
+<li id="155f0efc9f7b036a6dadfe8af92e23b8">(array) plugins_dir
+<li id="21b03c8a1693316a6e0bd27f7e745d7f">(string) cache_dir
+<li id="aad218cc2204360a6c94f9fec1c03b85">(array) config_dir
+<li id="b207c8a163e750043cb908609cddb5e4">(boolean) force_compile
+<li id="efe41b3181caef2b5ebb9e0299f8f665">(boolean) compile_check
+<li id="6cc32978037ca7f772d4f2e626dc1707">(boolean) use_sub_dirs
+<li id="e6da433b91b93e5c70f6d985c0713a6c">(boolean) allow_ambiguous_resources
+<li id="09843b7302ae8df7153c9a336d0d3d1d">(boolean) caching
+<li id="92bc1ace59b297e9059ff2bf73dda7fd">(boolean) merge_compiled_includes
+<li id="e0baf98b196f8dc776ae7c31d1acd636">(integer) cache_lifetime
+<li id="59102d85b63f9f38d6fbb3673f1b9a3a">(boolean) force_cache
+<li id="e95d5200338d3c1338180e7ffb5419ed">(NULL) cache_id
+<li id="e8626509bc8847d3bed6ad1241e93947">(NULL) compile_id
+<li id="8b95933aab0d9c6442d36e6c71a9237c">(string) left_delimiter
+<li id="a7e8745fe6dbd1d4c6a979bbbbef6cfb">(string) right_delimiter
+<li id="b08e38782dba326fb8b5b77b89935bf3">(string) security_class
+<li id="141dc52d150202256573c00197882088">(NULL) security_policy
+<li id="709ac1b0bc0fb0f0ffe8fabc4ec5b7ff">(integer) php_handling
+<li id="37fd6861a99609edaab3b00f79577e97">(boolean) allow_php_templates
+<li id="44f46ade6bde1fb7e1bbb42ce6b26b70">(boolean) direct_access_security
+<li id="2a8ff03a27b10ca0d4f0e455788454fb">(boolean) debugging
+<li id="be1a1bd827e0e68edcc41ff9aaf45940">(string) debugging_ctrl
+<li id="7a08bd437e61626fa2085bed9d0ca129">(string) smarty_debug_id
+<li id="08f8b972240c0c5f013153f8ee5dbeb4">(string) debug_tpl
+<li id="3420ca6d7de041c1e0aed764eb841cd3">(NULL) error_reporting
+<li id="400b0f236efd58b4bd36336fee764a70">(boolean) get_used_tags
+<li id="444afd2e6a44a1ad856c8df7d5af3013">(boolean) config_overwrite
+<li id="0640b82c8388294eb0107ba93b67b84f">(boolean) config_booleanize
+<li id="659912a55e08dba84ef22da96d68c1d7">(boolean) config_read_hidden
+<li id="31ac2ae9d56ea56c8196ac499f7ddb1f">(boolean) compile_locking
+<li id="10fd8636dfcfba8a977c025a0272e2b4">(boolean) cache_locking
+<li id="259fb19f2a58d7616a88d6d629f5e805">(integer) locking_timeout
+<li id="8b6ccfc39b4d5a274a1cb232ee554c07">(array) template_functions
+<li id="7f2b51b2c0a35d667f3fa846d593fd96">(string) default_resource_type
+<li id="4868bd272417c1d2ec8dbe2a7b3faf92">(string) caching_type
+<li id="7d44452d5a16723a25b6b9a8dc577194">(array) properties
+<li id="0ee07d433deffd820c4bb1e54a61e541">(string) default_config_type
+<li id="bc6ff590cc880c93a52d403ca3b10767">(array) template_objects
+<li id="8bdfeeddd4cb57be2a0c34cc63b86e56">(boolean) cache_modified_check
+<li id="64fc5b6f14fc7367f04f3b3fd6ea9b18">(array) registered_plugins
+<li id="f1e12dc049a4d7cd37540bb3c09605aa">(array) plugin_search_order
+<li id="9f1cbfc942c4981a925450623e3c6d69">(array) registered_objects
+<li id="66f53a5e150b6c0b7c4c3b289597cb37">(array) registered_classes
+<li id="8331562d105e6b80dd70100aeeecae89">(array) registered_filters
+<li id="f73ba4a3ce795528797bcca99557b9d2">(array) registered_resources
+<li id="ff28e7781184f2379e73261696c762e0">(array) _resource_handlers
+<li id="ed83326f9a22d120b69b610e84ebd746">(array) registered_cache_resources
+<li id="e47a472c975cfe8b7e3393e270256a80">(array) _cacheresource_handlers
+<li id="c00c4aa87c70f9135ee0713efa51bffa">(array) autoload_filters
+<li id="9909ea69582cd6b378907a583fd2855d">(array) default_modifiers
+<li id="e676da0b48898fe92c139aaa3ce52d4f">(boolean) escape_html
+<li id="b606a8a610655f11f6c823b83b1869bf">(array) _smarty_vars
+<li id="1cca7e0d0c992cb0700ee0e646be7231">(double) start_time
+<li id="0efc23b38b22e29b76bddc8b8ab67d29">(integer) _file_perms
+<li id="d6c0e67a49ff343c70a80e6c544e8c38">(integer) _dir_perms
+<li id="69ac83a62d7daf75d889de8881bcdfcb">(array) _tag_stack
+<li id="47ba638905c4a93c783aea227e54599c">@smarty
+<li id="4e8d1299007621db0b63acf699a5b7a3">(NULL) _current_file
+<li id="b91065f24f1a4ff1fc1abb519aab559a">(boolean) _parserdebug
+<li id="db2c08ba32627afdcb88d638588d46ff">(array) merged_templates_func
+<li id="57fe11052ba5b0b62b2dc5b341c49af2">(string) template_class
+<li id="dfb9e1d70ff63f4489f0ea58d38dfe61">(array) tpl_vars
+<li id="e06f6bd1378dcdb90d3cf1cb11e936ef">(NULL) parent
+<li id="b95f672e6a12ecdf3a7fa6877ca8f7a0">(array) config_vars
+</ul></li><li id="3c3f7e6aabf99b219dc919a377be26f6">(NULL) template
+</ul></li><li id="31f1e22addd9abbd4443eed2e0c2c2fb">(string) packageDir
+<li id="64c4f4970ea9a9ee6bc34b669b377fa0">(string) sundayDir
+</ul></li></ul></li><li id="1f786e73276d3afbb010427f418cbdca">@injector
+<li id="efd48c6e79e000b632f42b421461af72">(string) viewTemplate
+<li id="d384a6606af729f4fb644c088e4b34db">(array) message
+<li id="30e5cab2bb33850b2cc4065bb2a7ed77">(string) logDir
+</ul></li><li id="c406049632f145ba5e2bc73bc613bb8b"  type="object">(BEAR\Package\Provide\Router\AuraRouter) router<ul><li id="21cd5e7f7514fb733745ce610a6f23a1">(array) globals
+<li id="7b2e6d68834f42139da9908f8ddb4b16">(NULL) map
+</ul></li><li id="e6ec74fdc8a4284af2867f20f0278ef4">@logger
+<li id="ccf5339042284433a3afe36a9eaa2a70">(NULL) page
+</ul></li><span style="visibility:hidden;"><div id="data_7eec3694b7511faf97f56d9ff345c05b"><pre></pre></div><div id="data_ee18de36c2c507104683653d27c6e96a"><pre></pre></div><div id="data_d17af1e59d562c9c00f2de19e9f73c97"><pre></pre></div><div id="data_156acedf4173a79099512661c7f710a9"><pre></pre></div><div id="data_a6dcda61f2459070592605795ff2a332"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_db8524f730543f33917d734a196d9aff"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=58)</i>
+  'BEAR\Package\Module\Cache\Interceptor\CacheLoader' <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=3)</i>
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_e3df3788f514f4eba5562926f4a6272a"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=58)</i>
+  'BEAR\Package\Module\Cache\Interceptor\CacheLoader' <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=3)</i>
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_65d21e70c8d3a5e3de5f9403174e5d2d"><pre></pre></div><div id="data_24180c5ef748a9dbfbfc88cca7d1404e"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_fb11eed0a8f63f8d7f90e6d9c6143117"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_60acfdf7268363da088c1a794404100e"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_4905eaf9991112dc7c81c64e38c80ba5"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_69c4a43ef2447cccadcc995fa6683240"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_270307c54af67011c0b019d1929146f9"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_60eaf4949cd888eeccf6fd3aa2785b90"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_629eec24341482850aed542c88f2d5a6"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_67e845d0da354e5e9d31926b22f4d3ab"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_3c514c9edc56e4918c540be73b4fa658"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_5fa4815de5dba79d1d815750fe84f5e0"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_b17db4972650efbe87aaa26556719d4a"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_7103f178bad72d168d95c28b27db7e36"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_750e1b36b0af71c4c5af731ceb3c7909"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_0b162cbcc39d9748cd2c429999ed9b77"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_b70f27094d1b2ee4bac848c8e03e511d"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_da595dd9383b936e828f3cb4fb01c324"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_0612db32ef6aa818878617e51cebf4f6"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_2398bedf52947135cf77a5d118c697da"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_b37f2f283dfd82afe3e0cadfaa147845"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_ef29cb63e2df4b79e90377f4fa0d4b57"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_917dc08fbff9a55ae00d36cd5c026016"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_240d3d67ae8da5c2fec45c088fab05fc"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_7f794109fea5c7afe4cc52d381d1f7bf"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_26109504a79553785bbec2def57f8156"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_e819892e3f48fd5c70006c5d9155d3fb"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_98757e10be883cc10c181e1c80665e6f"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_074bedfe9ab22a90d0011b0b82ea92d2"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_bc268357bf891d33f4906b67b148d0ef"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_dbedc6177a4f93288ff9d751ad43ad6e"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_5c6d10e1c4ba92b3c5cb258f91d30129"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_69d8076af50227ca258567bcfc6044e4"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_59eb87b928c778b9358f0c16db96649b"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_9147a80480153eebcc7696d363478612"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_7584b5d49b0adc19d290d065acb37cf8"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_bc71b611894f97b01fe2e8a8ec2b5bf5"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_2f58a0f5a9978a04be08f29ccec6507f"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_8a84eddae81b27258009d5dc88784e24"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_dad8d806cd3174d00ee5494b5b017019"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_b1863b3cf5ba13b23e2a539174e99c0d"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_5f3d76d6347345fc37a5025223066671"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_dc0d3d302bcadc7f5313182bd95d1353"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_a0086ce1c88ea3849aa3e793561bec37"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_1f2f53e85bd55bfbc051e4ae0b8a2839"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_e49bd3ee3e3a8d2e3c0cb38d24fa46db"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_2486155d49f68f1c8c73dc285232ac78"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_0ef8ed746681d4d4e5efb658f337a080"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_dbc5181a079b529e60bd614be3928cf5"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_3af0ff403799d58bf308a4872a5a5b09"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_4de9d6d649a42385429c4e08b007c896"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_1d3a93f5344997d2710a458b68b4927f"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_1369563674acc42e32a3d30bdfb2fa67"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_fa72bf3480eb88b2ada8b054d8428c60"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_45c8ac5f71f9131db30b4461c82b8e02"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_0b4cbbdc26d8a90f4faa01417bb595f4"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_dede560db83f1ba386e2af99a1c55c75"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_b009512b7767dde299cd43072daeb3ae"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_730bbfb8ad14493b652937fc9d7b4773"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_a1e4189eb7e711e349268966c736de1f"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_a9f9a201f89b718e23fd8d025aa2e216"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_b61df41ed3d0cf12272d78e35cc1d20a"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_aafd854ec47fe27b685f5781a18232ff"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_5bd1286de46b718b1a0706eeb0206f02"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_a8e9fe83244c65ce7393070438e09718"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_867f26c6fccb95bdf7095f3001d26dbc"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_bbf7219d62c4deed9b8b1ea30b50d126"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  'Scope' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_dcc3d3bef97b66c5e6cd0da3ca397bca"><pre></pre></div><div id="data_ce529d554ee14553207c171ef911648e"><pre></pre></div><div id="data_41f787611ce27469c363fedfd5688ad0"><pre></pre></div><div id="data_82b6dcebef4f4b64ef25f94cb1796bf5"><pre></pre></div><div id="data_a3a3d31ed0cd163addf5efc29930381b"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=58)</i>
+  'BEAR\Package\Module\Cache\Interceptor\CacheLoader' <font color='#888a85'>=&gt;</font> 
+    <b>object</b>(<i>Ray\Di\Definition</i>)[<i>152</i>]
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_8432488a9bec3956a7ead9b25104f949"><pre></pre></div><div id="data_0fba9e53d66f76094f461ebc6a566250"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1)</i>
+  'ignoreannotation' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Doctrine\Common\Annotations\Annotation\IgnoreAnnotation'</font> <i>(length=55)</i>
+</pre></pre></div><div id="data_092df62fa32f27be7aac644dacb7087e"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=59)</i>
+  'access' <font color='#888a85'>=&gt;</font> <small>boolean</small> <font color='#75507b'>true</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_65ca27aba97fa5d8ad21264cef8bea8b"><pre></pre></div><div id="data_e2cce6fc6d07d37e4067f7954cc10c37"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=4)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>100</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_1a6f5aca3da455c7a93980cc62821f27"><pre></pre></div><div id="data_bb5beca1c6f98b8c182a6e61ad627e3c"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=9)</i>
+  '@' <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>101</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_59466542ba07227737c6cd3c32e0a01e"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=3)</i>
+  'true' <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>110</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_bc44707595d0d548e341f4db3adc5efa"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=3)</i>
+  'true' <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>110</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_430ace81e4ae8cc2eefe4d8e9dea4e4c"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=3)</i>
+  'value' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Router'</font> <i>(length=6)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_79599d338bf386924248d071b757720d"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>2</font>
+</pre></pre></div><div id="data_3f805ffa595d31d4a2cac99634bbfcb8"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>2</font>
+</pre></pre></div><div id="data_085d50109cf2663c63587b98721fdef3"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_49aafdc65446218caa37daf81887548e"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_71460e2acaf873abf0f546edd4b22b62"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_3ca6c39221627f411715a2013ee7223e"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_4bb7a2029805813e24829bd31f63a2a8"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_66a6126b80d0bb41742772c4e36363ca"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_3d659445954242a39d6189f7ed334dc4"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+</pre></pre></div><div id="data_3ffa381d0706b666789925b28101f3a0"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=4)</i>
+  'Doctrine\Common\Annotations\Annotation\Target' <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=7)</i>
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_97b36b4b4b1329a8900ea676a19fabec"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=4)</i>
+  'float' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'double'</font> <i>(length=6)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_532ca196d286e62ed5363fc5c8b7531d"><pre></pre></div><div id="data_9e2fac3437f8cfe31c8dccf0aaba9d67"><pre></pre></div><div id="data_1f7f97a1e033da34983702f307eefb0e"><pre></pre></div><div id="data_d1e74426ffe3efd1cb6568e569a88201"><pre></pre></div><div id="data_9e1b2662a4e86ee0a567fe27cf12d7f3"><pre></pre></div><div id="data_c1d5089dd4de9f812bc09be5d7206b6a"><pre></pre></div><div id="data_6a04182b1a6979187474debe81709084"><pre></pre></div><div id="data_642686f7b4bd029323fd812aee2e493b"><pre></pre></div><div id="data_0d62e1b4f0e06f02e9505c7a0c05bd47"><pre></pre></div><div id="data_1bac73faea250b076b418d4be88a863d"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=18)</i>
+  'Doctrine\DBAL\Logging\DebugStack' <font color='#888a85'>=&gt;</font> 
+    <b>object</b>(<i>Doctrine\DBAL\Logging\DebugStack</i>)[<i>217</i>]
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_7c432ae0c16a326dd4b177694377a7b5"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=8)</i>
+  'BEAR\Resource\Module\SchemeCollectionProvider' <font color='#888a85'>=&gt;</font> 
+    <b>object</b>(<i>BEAR\Resource\SchemeCollection</i>)[<i>227</i>]
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_7c2c50aef77a8f740e07371264401369"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_514953bc0589333e9a709ac68d67b077"><pre></pre></div><div id="data_6a356ba53f0ac9a5f20cf21d7fc52447"><pre></pre></div><div id="data_86b26ffc884f8bb4582ebac8fb29d2e6"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=4)</i>
+  'origin' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_9bd64d80bc52e67cec301f2757867952"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=4)</i>
+  'origin' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_72f75d0ebfd4589762a79980d51bc028"><pre></pre></div><div id="data_6cf3fe718092ec1a6ac8aa55a85d9058"><pre></pre></div><div id="data_ea6b7a2975c145c4f563deb3555b4e6e"><pre></pre></div><div id="data_1be6d06d929224c0bb04554fcf8f550e"><pre></pre></div><div id="data_e3380dc1a8f91c43a4f901ace34c807d"><pre></pre></div><div id="data_33b7e33408dcc689f8c89bb27d89f501"><pre></pre></div><div id="data_4d7ecee5b8bd1960d265b19ba3da12a5"><pre></pre></div><div id="data_689b017e227c6cfa2353603b1be048aa"><pre></pre></div><div id="data_92606396a48bb4c5d26a21ebcca07e63"><pre></pre></div><div id="data_bdc45254be3a49ecc60ed34e6feed96a"><pre></pre></div><div id="data_40da5bec4cbca01c3ec89dbac3a0c1d1"><pre></pre></div><div id="data_421fb1a0c543a0e3a72a8a8e58ee3948"><pre></pre></div><div id="data_148787f2ee308c2fbfdb8139cc9b62bd"><pre></pre></div><div id="data_15e60a46e998c825da0cb427843893fc"><pre></pre></div><div id="data_dd8abbd13283bfe9d46f1600017ef513"><pre></pre></div><div id="data_467afa7b9cb0c15217b8887bfde9271f"><pre></pre></div><div id="data_57d3358f1c74c68100b72f89d9bf44d3"><pre></pre></div><div id="data_0c974a6341d225855079255918df3c26"><pre></pre></div><div id="data_2c1890644ea07bb8d21c6c420a464341"><pre></pre></div><div id="data_d0254e40f3760cd527f6555977c74b80"><pre></pre></div><div id="data_15ccc3dc01db9640bafac46b775272fa"><pre></pre></div><div id="data_3f062307aeb6a1b2338a77814b19a7cb"><pre></pre></div><div id="data_7b11bf6c85e678f69dae58476b73f9c7"><pre></pre></div><div id="data_0eb612df7af25fef4e3d8cf1f972f949"><pre></pre></div><div id="data_6f7849784a83af07a956b3815dbed64b"><pre></pre></div><div id="data_7b905163c4342fea169f67e2b43b9b44"><pre></pre></div><div id="data_3feec2630acc413e380ca42afa513f59"><pre></pre></div><div id="data_5ce752b4816851619e64915c2fcdfd1f"><pre></pre></div><div id="data_72ab7a9ed10f38ebf81e11b6704830a4"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'*'</font> <i>(length=1)</i>
+</pre></pre></div><div id="data_5a240d4f54d73fd5e34c5300f18f8012"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'prototype'</font> <i>(length=9)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_08fdc32e4d1e41955cd5503b5278f784"><pre></pre></div><div id="data_9f56203246ac43b3bd77a289055fa0be"><pre></pre></div><div id="data_8baeeba9d9361d4365348ba3df0cdb6f"><pre></pre></div><div id="data_1103043941208532516fa1cf0ecf2e3e"><pre></pre></div><div id="data_56f12c3ae1a752befb4255311937abf7"><pre></pre></div><div id="data_57aec8699432e41def81ff222a137705"><pre></pre></div><div id="data_839dccfec0ab22c492b686286826f7f5"><pre></pre></div><div id="data_22bfb388e60ddb2f2c2541bc4c9187a6"><pre></pre></div><div id="data_7e2d66b0bfc02651b7c6b63652d952b8"><pre></pre></div><div id="data_9af84cd0a40b2a619e840d14a396afb1"><pre></pre></div><div id="data_07c757c0e80592f33412a24897bbc508"><pre></pre></div><div id="data_41b1f87345f9673cb54fa1237985710f"><pre></pre></div><div id="data_c185ce514ad68aa57cc289b3d8994631"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_7d6df2bbd25299cf14ee15c79ec5922b"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_d63e755840f56627e7c81bb8d4a2907a"><pre></pre></div><div id="data_dc7a900d46503830e3d75782ce6921d0"><pre></pre></div><div id="data_7c3411b514cad844ba8c3b6b988a2c5a"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_e130a98a7359f36d45158a8b86db2399"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_b9d25b2be8371575187dd1b2da0c70d8"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_a20a11087ff5fb2ae19c77565e6b81ee"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_16a4e41ed09bf287c69ac732dbba3d56"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_72adb8e2eed77099692f4372d9f99f12"><pre></pre></div><div id="data_6aa5b5dea78e94fc3f5206f72fe4a41d"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/var/folders/nq/gbdyjmt122jck9tgpfq6zmcw0000gn/T'</font> <i>(length=48)</i>
+</pre></pre></div><div id="data_84a231069410bc05ea853c710941123c"><pre></pre></div><div id="data_137499114446b0a082b5a48055bb0c6a"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=152)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'EOF'</font> <i>(length=3)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_805a51dd577e5653297883c5df052d29"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=386)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>0</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_3594bdbc5172bc73bd840c36602d8c34"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1008)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>59</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_4e9f9c880afe5877c3e72894b8432e8b"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1008)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>2</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_9261310bbf85ae4673c1036cba13c308"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=847)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>0</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_e544cc7d17ce9707aa3c4c9a3ca89c8f"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=531)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>3</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_bd038355d42f69e897c5ce61ffd1e017"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=444)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>161</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_5a5a55bacb3cf7cc1e8043c01ffac4a2"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=444)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>24</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_e8920da15c2f4e7ddbd4fe137dc18430"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=115)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>0</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_dca53fc2f68543f1537caab4c2e06204"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=115)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>-32768</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_33bfff3cf18024625eb6897dc7e132c3"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=399)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>0</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_06d34340a0762bef433055a8daad565e"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=399)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_ddf27f5f33922b4793441a0029b2a84d"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=399)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_fd71d6aa52da4c8fcd5175f7246641f2"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=399)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_60cb07f2d200b45fc8fc1cd24f675ec7"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=399)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_61bc7ddc09544bed93ee0c0754a22c74"><pre></pre></div><div id="data_eaf88117e07af61c02bf0c97a0f56a24"><pre></pre></div><div id="data_d2bcb4c63c75ee45f9d400b87e713cc3"><pre></pre></div><div id="data_06b725b81678baf39310c045a864713d"><pre></pre></div><div id="data_b6f9f0a972cbfac691236d95e8578d76"><pre></pre></div><div id="data_95675051fc2793ea153cdc3e05967381"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=127)</i>
+  258 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>261</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_f277c81554b7a61912232ee761e45564"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  375 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_330eceb7960e11132635ee0d211f0900"><pre></pre></div><div id="data_2824c03699264b5b1453dd51beffbdb2"><pre></pre></div><div id="data_751e423e6a5e3f8e02204af1930e92fc"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=56)</i>
+  'Expr_BitwiseNot' <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=2)</i>
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_7d005107a4fc9ec0a63030e69863eb38"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'_NO_INDENT_1068392405'</font> <i>(length=21)</i>
+</pre></pre></div><div id="data_58904ebb5f48c66299a68248f66add1f"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'_NO_INDENT_1068392405'</font> <i>(length=21)</i>
+</pre></pre></div><div id="data_287ec2a7de7a14a441f6a28713212828"><pre></pre></div><div id="data_4f2d35f354846a8f201ec92d64ab6bd4"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_1d2de36ff36db872f94445e443f2f7d0"><pre></pre></div><div id="data_25b3a6ca22631679ff133a5d1c3a12c6"><pre></pre></div><div id="data_1eb7c64135231180641bd10a3213c463"><pre></pre></div><div id="data_adb6fa6887ba0a13a2f87a738280cf5d"><pre></pre></div><div id="data_bd20256ea63164596115bf26aad3a67a"><pre></pre></div><div id="data_ccf5339042284433a3afe36a9eaa2a70"><pre></pre></div><div id="data_ca880e7c994997d42de28495d4dbf0e7"><pre></pre></div><div id="data_baa56e5204c798b9080da9809f43594b"><pre></pre></div><div id="data_c2963e95eb0a529ed5d456dcd9cbb7f5"><pre></pre></div><div id="data_232e93630119e68269a3b339d43d241a"><pre></pre></div><div id="data_3df8f0e14397566506af9fc0391cd72c"><pre></pre></div><div id="data_80d1e6f585d23261ae8f94834f80abbc"><pre></pre></div><div id="data_c070a3dab117960d1be70f5f2d25f1ed"><pre></pre></div><div id="data_67bb06fbfda9d2d7cc28986610087e44"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  'now' <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=1)</i>
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_bd8916a4bdf7ab48a0fe129cf9da37aa"><pre></pre></div><div id="data_ba5e34b6fba273edcd21b36e5c4e59b2"><pre></pre></div><div id="data_e741ceff552c58b3e1d45b6e49e7d490"><pre></pre></div><div id="data_76c684d41dbc471a6c415f2728e34936"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  'now' <font color='#888a85'>=&gt;</font> <small>boolean</small> <font color='#75507b'>false</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_a4d2bb2d6e61030dffe2826f034889fa"><pre></pre></div><div id="data_9131bb1ede2e088e1adcb8dbe96b2e9a"><pre></pre></div><div id="data_5836940dba234ae74c750e1b6f62bfb7"><pre></pre></div><div id="data_8e0e8d497b7c8b15b8ed0386b3687d63"><pre></pre></div><div id="data_d2ff82142b6c26976b39372c3c5b2b1e"><pre></pre></div><div id="data_88ee1644d82879144d42dfce61d70005"><pre></pre></div><div id="data_40b11f8b7acd1f52a44229403d151f64"><pre></pre></div><div id="data_bf520887e0250e36b1109f69511c78df"><pre></pre></div><div id="data_c764742f1cbf49537fc6e9e1eedf1ba1"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'Sandbox'</font> <i>(length=7)</i>
+</pre></pre></div><div id="data_ff9b2a811bc27256614d58957601a44f"><pre></pre></div><div id="data_16688b8391aade9ae375ba6a898aa80a"><pre></pre></div><div id="data_6ea0f3b8e39dad493fe8c9aac6537e6d"><pre></pre></div><div id="data_c2deed2bd9a9e8daa19d52d961777392"><pre></pre></div><div id="data_8e8f9c79ee7fd2aeb0f20847d25a8cd1"><pre></pre></div><div id="data_fdbab0b83e57d906274dbe366bd1facb"><pre></pre></div><div id="data_6f788964520d508e462db69e36a2d3a4"><pre></pre></div><div id="data_801323e460451e23c851262d92b746ae"><pre></pre></div><div id="data_0453c4f6c0396b93872714739c4461c3"><pre></pre></div><div id="data_010eb9eb7546404a5a5f3939216d3e4e"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+</pre></pre></div><div id="data_287450538abea9ad18ae33ba19296752"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_ff4d79259cabf0fce76dc3d36be06608"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_89cc8391298462dba8e34a1a5d6f6992"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_09710d3d5d4e144fba2c054462f69b01"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_bac84dccf153c127df972610edf6b07c"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_b49ded89f56063789eb64e1d9ea9aac7"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_43d6b3e8983c0b2fc32d49853861c363"><pre></pre></div><div id="data_6eba1c8232b2bfde83049c829c04f6ca"><pre></pre></div><div id="data_3c3f7e6aabf99b219dc919a377be26f6"><pre></pre></div><div id="data_44b677747d9b5a845f53a76b12d5d84c"><pre></pre></div><div id="data_404d6a3323e22251cec203ddd7d7c8ee"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/\{([^\}]+)\}/'</font> <i>(length=14)</i>
+</pre></pre></div><div id="data_edb024c630878c1826ca5b98308e567a"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=7)</i>
+  '+' <font color='#888a85'>=&gt;</font> <small>boolean</small> <font color='#75507b'>true</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_c75b5de1c813e2a0a216ff2eec9e641c"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=18)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>':'</font> <i>(length=1)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_acecb2ff15f968fbf76bb396b9e382ed"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=18)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'%3A'</font> <i>(length=3)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_c2a8c61c56628ee64b1245ad5179f12e"><pre></pre></div><div id="data_1cf020f4a82e07d085d1d7929ad8a1d1"><pre></pre></div><div id="data_3f23f40f3a78767e0c278db8e4330e89"><pre></pre></div><div id="data_35aec384261cc495cd41bc3f563e0ca9"><pre></pre></div><div id="data_04a01bc90fd31480c67a325ce4faa01b"><pre></pre></div><div id="data_271fbd3e2c67427a21976d12a3c1ea22"><pre></pre></div><div id="data_367202287ed43cc080d4e6cb68df4dc6"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_5edd31ca5837209357d000291205036c"><pre></pre></div><div id="data_4f8bf130567d8004212842c5a8b8cd31"><pre></pre></div><div id="data_f22ae3f747b40cee91f097ab1c57e566"><pre></pre></div><div id="data_0b82a5ce074119d335215fbed55eecd3"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>object</b>(<i>BEAR\Package\Provide\ApplicationLogger\ResourceLog\Writer\Fire</i>)[<i>246</i>]
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_01f3b8c9733339e6ca4a94e8555e94b1"><pre></pre></div><div id="data_4d52255a81f6c9248d047da854a6d8a8"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_1c8ec9852121445fb5ab5ab60c0eff22"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_f7d09c0329bf85a4941d912efa75799a"><pre></pre></div><div id="data_f81d47d95ac67d3500f25175d58e52ce"><pre></pre></div><div id="data_def13b1a8e996e251b1a2780d9276f54"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=12)</i>
+  8 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>5</font>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_d20eac541882d6475c51ffa23dd57c72"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_13d6286d3bc763db3adeee2d676a8be2"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_e0036f1f20344a06ffae228126cfa50c"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=8)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'EMERG'</font> <i>(length=5)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_eb63ef6122d1c6045c5b073330fa5b16"><pre></pre></div><div id="data_c5263ff27ffee53b87d50de18de5cf16"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>9223372036854775807</font>
+</pre></pre></div><div id="data_03e38573dc243dc9791acb4b10d0817f"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>9223372036854775807</font>
+</pre></pre></div><div id="data_1dd4908c071c0170482b9e214ff05b36"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>9223372036854775807</font>
+</pre></pre></div><div id="data_dfc10afe33b7af65b9e482d8dd7aa384"><pre></pre></div><div id="data_3d8531efe0ad793390c07b2e5186d81b"><pre></pre></div><div id="data_c05e38a58f2f9e9e456bb5290ae14344"><pre></pre></div><div id="data_2088630fdc975293f5976865e0c07f00"><pre></pre></div><div id="data_4d0a8817b89a25e3852dda3999cc103f"><pre></pre></div><div id="data_25f4276f5379a4293cb8237c53b84412"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>500</font>
+</pre></pre></div><div id="data_18c3ec9033a71af6416060a7c73d329b"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_66af0a4c70c57173bf945439fb0bf170"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+</pre></pre></div><div id="data_587659b869d6b57fc8e12f18cde6396b"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+</pre></pre></div><div id="data_4eb94ccbeca955e8f531c366654062fa"><pre></pre></div><div id="data_0e4a01af61fa468c6c1aeb7c5cfa1768"><pre></pre></div><div id="data_1a4db86fad74ad1d1697f0687d5f383a"><pre></pre></div><div id="data_ab42039bd19cde937b78d0088513c0b0"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_36da172795aef3be18d5c58a9495e3f7"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_a79b06df4ab76b33a66ddaec5b8973f1"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_051f8e7e169b58111650db2767bced56"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_e4ea65073d7302cc4902a72ae6b3c3a1"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'UTF-8'</font> <i>(length=5)</i>
+</pre></pre></div><div id="data_117a481821e3adf2579c0774dd837bb1"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'%b %e, %Y'</font> <i>(length=9)</i>
+</pre></pre></div><div id="data_b83dd312a05349a271b0c2542e515d9f"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'u'</font> <i>(length=1)</i>
+</pre></pre></div><div id="data_71b0361a23bf49f12edb2eee18fa8161"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_bdf918e4b2fc35ce4c9130c8c795d24f"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_6abd06fef76b9bf4526c4951840e586c"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_b893c5920ff58595803afd43f73ea5c5"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_7a425c0ee79e0f0ed77b182e340b27ec"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package/apps/Sandbox/var/lib/smarty/template/'</font> <i>(length=69)</i>
+</pre></pre></div><div id="data_d957ca2e07903f331d5d2bb3d48cd45c"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package/apps/Sandbox/var/lib/smarty/template/'</font> <i>(length=69)</i>
+</pre></pre></div><div id="data_1fba0f7f85fc542d8c91bec9103fc7d3"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'./configs/'</font> <i>(length=10)</i>
+</pre></pre></div><div id="data_237bb5e567add47d2e16ebe1c386ea7e"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'./configs/'</font> <i>(length=10)</i>
+</pre></pre></div><div id="data_4b5ec83f18e1cb7c9faa9134e98b44c3"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'./configs/'</font> <i>(length=10)</i>
+</pre></pre></div><div id="data_1a87d096b95fbf5f7ac1ca3b032145ce"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'./configs/'</font> <i>(length=10)</i>
+</pre></pre></div><div id="data_1d5694f4c188bfeef6f273f9b2518651"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package/apps/Sandbox/var/tmp/smarty/template_c/'</font> <i>(length=71)</i>
+</pre></pre></div><div id="data_155f0efc9f7b036a6dadfe8af92e23b8"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=3)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package/vendor/smarty/smarty/distribution/libs/plugins/'</font> <i>(length=79)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_21b03c8a1693316a6e0bd27f7e745d7f"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package/apps/Sandbox/var/tmp/smarty/cache/'</font> <i>(length=66)</i>
+</pre></pre></div><div id="data_aad218cc2204360a6c94f9fec1c03b85"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'./configs/'</font> <i>(length=10)</i>
+</pre></pre></div><div id="data_b207c8a163e750043cb908609cddb5e4"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_efe41b3181caef2b5ebb9e0299f8f665"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_6cc32978037ca7f772d4f2e626dc1707"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_e6da433b91b93e5c70f6d985c0713a6c"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_09843b7302ae8df7153c9a336d0d3d1d"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_92bc1ace59b297e9059ff2bf73dda7fd"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_e0baf98b196f8dc776ae7c31d1acd636"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>3600</font>
+</pre></pre></div><div id="data_59102d85b63f9f38d6fbb3673f1b9a3a"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_e95d5200338d3c1338180e7ffb5419ed"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_e8626509bc8847d3bed6ad1241e93947"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_8b95933aab0d9c6442d36e6c71a9237c"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'{'</font> <i>(length=1)</i>
+</pre></pre></div><div id="data_a7e8745fe6dbd1d4c6a979bbbbef6cfb"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'}'</font> <i>(length=1)</i>
+</pre></pre></div><div id="data_b08e38782dba326fb8b5b77b89935bf3"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'Smarty_Security'</font> <i>(length=15)</i>
+</pre></pre></div><div id="data_141dc52d150202256573c00197882088"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'Smarty_Security'</font> <i>(length=15)</i>
+</pre></pre></div><div id="data_709ac1b0bc0fb0f0ffe8fabc4ec5b7ff"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>0</font>
+</pre></pre></div><div id="data_37fd6861a99609edaab3b00f79577e97"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_44f46ade6bde1fb7e1bbb42ce6b26b70"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_2a8ff03a27b10ca0d4f0e455788454fb"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_be1a1bd827e0e68edcc41ff9aaf45940"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'NONE'</font> <i>(length=4)</i>
+</pre></pre></div><div id="data_7a08bd437e61626fa2085bed9d0ca129"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'SMARTY_DEBUG'</font> <i>(length=12)</i>
+</pre></pre></div><div id="data_08f8b972240c0c5f013153f8ee5dbeb4"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'file:/Users/akihito/git/BEAR.Package/vendor/smarty/smarty/distribution/libs/debug.tpl'</font> <i>(length=85)</i>
+</pre></pre></div><div id="data_3420ca6d7de041c1e0aed764eb841cd3"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'file:/Users/akihito/git/BEAR.Package/vendor/smarty/smarty/distribution/libs/debug.tpl'</font> <i>(length=85)</i>
+</pre></pre></div><div id="data_400b0f236efd58b4bd36336fee764a70"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_444afd2e6a44a1ad856c8df7d5af3013"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_0640b82c8388294eb0107ba93b67b84f"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_659912a55e08dba84ef22da96d68c1d7"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_31ac2ae9d56ea56c8196ac499f7ddb1f"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>true</font>
+</pre></pre></div><div id="data_10fd8636dfcfba8a977c025a0272e2b4"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_259fb19f2a58d7616a88d6d629f5e805"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>10</font>
+</pre></pre></div><div id="data_8b6ccfc39b4d5a274a1cb232ee554c07"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_7f2b51b2c0a35d667f3fa846d593fd96"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'file'</font> <i>(length=4)</i>
+</pre></pre></div><div id="data_4868bd272417c1d2ec8dbe2a7b3faf92"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'file'</font> <i>(length=4)</i>
+</pre></pre></div><div id="data_7d44452d5a16723a25b6b9a8dc577194"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_0ee07d433deffd820c4bb1e54a61e541"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'file'</font> <i>(length=4)</i>
+</pre></pre></div><div id="data_bc6ff590cc880c93a52d403ca3b10767"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_8bdfeeddd4cb57be2a0c34cc63b86e56"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_64fc5b6f14fc7367f04f3b3fd6ea9b18"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_f1e12dc049a4d7cd37540bb3c09605aa"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=4)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'function'</font> <i>(length=8)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_9f1cbfc942c4981a925450623e3c6d69"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_66f53a5e150b6c0b7c4c3b289597cb37"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_8331562d105e6b80dd70100aeeecae89"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_f73ba4a3ce795528797bcca99557b9d2"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_ff28e7781184f2379e73261696c762e0"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_ed83326f9a22d120b69b610e84ebd746"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_e47a472c975cfe8b7e3393e270256a80"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_c00c4aa87c70f9135ee0713efa51bffa"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_9909ea69582cd6b378907a583fd2855d"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_e676da0b48898fe92c139aaa3ce52d4f"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_b606a8a610655f11f6c823b83b1869bf"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_1cca7e0d0c992cb0700ee0e646be7231"><pre><pre class='xdebug-var-dump' dir='ltr'><small>float</small> <font color='#f57900'>1380926142.2476</font>
+</pre></pre></div><div id="data_0efc23b38b22e29b76bddc8b8ab67d29"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>420</font>
+</pre></pre></div><div id="data_d6c0e67a49ff343c70a80e6c544e8c38"><pre><pre class='xdebug-var-dump' dir='ltr'><small>int</small> <font color='#4e9a06'>505</font>
+</pre></pre></div><div id="data_69ac83a62d7daf75d889de8881bcdfcb"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_47ba638905c4a93c783aea227e54599c"><pre></pre></div><div id="data_4e8d1299007621db0b63acf699a5b7a3"><pre></pre></div><div id="data_b91065f24f1a4ff1fc1abb519aab559a"><pre><pre class='xdebug-var-dump' dir='ltr'><small>boolean</small> <font color='#75507b'>false</font>
+</pre></pre></div><div id="data_db2c08ba32627afdcb88d638588d46ff"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_57fe11052ba5b0b62b2dc5b341c49af2"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'Smarty_Internal_Template'</font> <i>(length=24)</i>
+</pre></pre></div><div id="data_dfb9e1d70ff63f4489f0ea58d38dfe61"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_e06f6bd1378dcdb90d3cf1cb11e936ef"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_b95f672e6a12ecdf3a7fa6877ca8f7a0"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre></pre></div><div id="data_31f1e22addd9abbd4443eed2e0c2c2fb"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package'</font> <i>(length=31)</i>
+</pre></pre></div><div id="data_64c4f4970ea9a9ee6bc34b669b377fa0"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package/vendor/bear/sunday'</font> <i>(length=50)</i>
+</pre></pre></div><div id="data_1f786e73276d3afbb010427f418cbdca"><pre></pre></div><div id="data_efd48c6e79e000b632f42b421461af72"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package/src/BEAR/Package/Module/ExceptionHandle/template/view.php'</font> <i>(length=89)</i>
+</pre></pre></div><div id="data_d384a6606af729f4fb644c088e4b34db"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=5)</i>
+  'ResourceNotFound' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'The requested URI was not found on this service.'</font> <i>(length=48)</i>
+  <i>more elements...</i>
+</pre></pre></div><div id="data_30e5cab2bb33850b2cc4065bb2a7ed77"><pre><pre class='xdebug-var-dump' dir='ltr'><small>string</small> <font color='#cc0000'>'/Users/akihito/git/BEAR.Package/apps/Sandbox/var/log'</font> <i>(length=52)</i>
+</pre></pre></div><div id="data_c406049632f145ba5e2bc73bc613bb8b"><pre></pre></div><div id="data_21cd5e7f7514fb733745ce610a6f23a1"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=19)</i>
+  '_GET' <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=0)</i>
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_7b2e6d68834f42139da9908f8ddb4b16"><pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=19)</i>
+  '_GET' <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=0)</i>
+      ...
+  <i>more elements...</i>
+</pre></pre></div><div id="data_e6ec74fdc8a4284af2867f20f0278ef4"><pre></pre></div></span>
+</body>
+</html>
