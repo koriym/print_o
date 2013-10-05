@@ -32,7 +32,7 @@ Try click, double click, or drag.
  * [data/sample-01](http://koriym.github.com/print_o/sample/01-sample.html) - [source code](https://github.com/koriym/print_o/blob/master/data/sample-01.php)
  * [Doctrine annotation reader object](http://koriym.github.com/print_o/sample/02-doctrine-anno.html)
  * [Symfony commandline application object](http://koriym.github.com/print_o/sample/03-symfony.command.application.html)
- * [BEAR.Sunday application object](http://koriym.github.com/print_o/sample/04-sunday-app.html)
+ * [BEAR.Sunday application object](http://koriym.github.com/print_o/sample/04-sunday-app.html) ([all at once](http://koriym.github.com/print_o/sample/05-sunday-app-all.html))
 
 ## Dependencies
 
