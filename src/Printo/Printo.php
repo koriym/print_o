@@ -11,6 +11,11 @@ use DbugL;
 use Exception;
 use ReflectionObject;
 use RuntimeException;
+
+if (! function_exists('print_a')) {
+    require_once dirname(dirname(__DIR__)) . '/libs/debuglib/debuglib.php';
+}
+
 /**
  * Printo
  *
