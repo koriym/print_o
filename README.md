@@ -1,6 +1,8 @@
 # print_o
 ## An object graph visualizer for PHP
 
+![object graph](http://koriym.github.io/print_o/images/object_graph.png "print_o($obj);")
+
 ### What is object graph ?
 
 > Object-oriented applications contain complex webs of interrelated objects. Objects are linked to each other by one object either owning or containing another object or holding a reference to another object. This web of objects is called an object graph and it is the more abstract structure that can be used in discussing an application's state. - [wikipedia](http://en.wikipedia.org/wiki/Object_graph)
