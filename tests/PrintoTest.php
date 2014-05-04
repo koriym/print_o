@@ -9,13 +9,13 @@ class Sample
     public $a = 1;
     protected $b;
     private $c;
-    
+
     public function __construct()
     {
         $this->b = new DateTime;
         $this->c = new SampleSub;
     }
-    
+
 }
 
 class SampleSub
@@ -46,11 +46,11 @@ class PrintoTest extends \PHPUnit_Framework_TestCase
         $actual = $this->printo;
         $this->assertInstanceOf('\Printo\Printo', $this->printo);
     }
-    
+
     public function test_toString()
     {
         $actual = (string) $this->printo;
         $this->assertInternalType('string', $actual);
     }
-    
+
 }
