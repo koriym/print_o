@@ -7,21 +7,10 @@
  */
 namespace Printo;
 
-use DbugL;
 use Exception;
 use ReflectionObject;
 use RuntimeException;
 
-if (! function_exists('print_a')) {
-    require_once dirname(dirname(__DIR__)) . '/libs/debuglib/debuglib.php';
-}
-
-/**
- * Printo
- *
- * @package Printo
- * @author  Akihito Koriyama <akihito.koriyama@gmail.com>
- */
 class Printo
 {
     /**
@@ -29,90 +18,188 @@ class Printo
      */
     private $objectIdStorage;
 
-    private $objectAddStorage;
+    /**
+     * @var \SplObjectStorage
+     */
+    private $sourceObjectStorage;
 
     /**
      * @var array
      */
-    private $graph =[];
+    private $graph = [
+        'nodes' => [],
+        'links' => []
+    ];
+
+    private $nodeIndex = -1;
+
+    /**
+     * @var NodeFactoryInterface
+     */
+    private $nodeFactory;
+
+    const CONFIG_OBJECT_IN_ARRAY = 1;
+    const CONFIG_ARRAY_IN_OBJECT = 2;
+    const CONFIG_ONLY_PUBLIC_PROPERTY = 4;
+    const CONFIG_ALL = 7;
+
+    private $config = 6;
 
     /**
      * @param $object
      *
      * @throws RuntimeException
      */
-    public function __construct($object)
+    public function __construct($object, NodeFactoryInterface $nodeFactory = null)
     {
         if (!is_object($object)) {
-            throw new RuntimeException('Object only: ' . gettype($object));
+            throw new \LogicException('Object only: ' . gettype($object));
         }
         $this->object = $object;
         $this->objectIdStorage = new \SplObjectStorage;
-        $this->objectAddStorage = new \SplObjectStorage;
-        ob_start();
+        $this->sourceObjectStorage = new \SplObjectStorage;
+        $this->nodeFactory = $nodeFactory ?: new NodeFactory;
+    }
+
+    public function setConfig($config)
+    {
+        $this->config = $config;
     }
 
     public function __toString()
     {
         try {
             $this->addObject($this->object);
-            $links = json_encode($this->graph, JSON_PRETTY_PRINT);
+            $list = json_encode($this->graph, JSON_PRETTY_PRINT);
 
-            $html = require __DIR__ . '/view.html';
+            $html = require __DIR__ . '/html/d3.force.html';
 
             return $html;
         } catch (Exception $e) {
+            echo $e;
+            exit;
             error_log($e);
         }
     }
 
     private function addObject($object)
     {
-        $this->objectAddStorage->attach($object);
-        $props = (new ReflectionObject($object))->getProperties();
+        $this->sourceObjectStorage->attach($object);
+        $ref = new \ReflectionObject($object);
+        $meta = ['file' => $ref->getFileName()];
+        $sourceIndex = $this->getObjectId($object, $meta);
+        $props = $ref->getProperties();
         foreach ($props as $prop) {
-            $prop->setAccessible(true);
-            $value = $prop->getValue($object);
-            $name = $prop->name;
-            $this->addGraph($object, $value, $name);
-            if (is_object($value) && ! $this->objectAddStorage->contains($value)) {
+            $this->prop($prop, $object, $sourceIndex);
+        }
+    }
+
+    private function prop(\ReflectionProperty $prop, $object, $sourceIndex){
+        $prop->setAccessible(true);
+        $value = $prop->getValue($object);
+        /** @var $prop \ReflectionProperty */
+        $meta = ['prop' => $prop->getName(), 'modifier' => $prop->getModifiers()];
+        $targetIndex = $this->addGraphLink($sourceIndex, $value, $meta);
+        if (is_object($value) && !$this->sourceObjectStorage->contains($value)) {
+            $this->addObject($value);
+        }
+        if (is_array($value)) {
+            $this->addArray($targetIndex, $value);
+        }
+    }
+
+    private function addArray($sourceIndex, array $array)
+    {
+        foreach ($array as $key => $value) {
+            if (is_object($value)) {
                 $this->addObject($value);
+                continue;
+            }
+            $targetIndex = $this->addGraphLink($sourceIndex, $value, ['key' => $key]);
+            if (is_array($value)) {
+                $this->addArray($targetIndex, $value);
             }
         }
     }
 
-    private function addGraph($source, $target, $name)
+    /**
+     * @param int   $sourceIndex
+     * @param mixed $value
+     * @param array $meta
+     *
+     * @return int
+     */
+    private function addGraphLink($sourceIndex, $value, array $meta)
     {
-        $doDraw = is_object($target);
-        $doDraw = true;
-        if ($doDraw) {
-            $this->graph[] = ['source' => $this->getName($source), 'target' => $this->getName($target), 'type' => gettype($target), 'name' => $name];
-        }
+        $targetIndex = $this->getTargetIndex($value, $meta);
+        $type = $this->getType($value);
+        $this->graph['links'][] = ['source' => $sourceIndex, 'target' => $targetIndex, 'type' => $type];
+
+        return $targetIndex;
     }
 
-    private function getName($item)
+    /**
+     * @param $value
+     *
+     * @return string
+     */
+    private function getType($value)
     {
-        if (is_object($item)) {
-            return $this->getObjectId($item) . '.' . get_class($item);
+        if (is_object($value)) {
+            return 'object';
         }
-        if (is_bool($item)) {
-            return $item ? '(true)' : '(false)';
+        if (is_array($value)) {
+            return 'array';
         }
-        if (is_scalar($item)) {
-            return (string) $item;
-        }
-    }
-    private function getObjectId($object)
-    {
-        static $cnt = 0;
 
+        return 'scalar';
+    }
+
+    /**
+     * @param mixed $value
+     * @param array $meta
+     *
+     * @return int
+     */
+    private function getTargetIndex($value, array $meta)
+    {
+        if (is_object($value)) {
+            return $this->getObjectId($value, $meta);
+        }
+        $node = $this->nodeFactory->newInstance($value, $meta);
+        $this->addNode($node);
+
+        return $this->nodeIndex;
+    }
+
+    /**
+     * @param $object
+     *
+     * @return int
+     */
+    private function getObjectId($object, array $meta)
+    {
         if ($this->objectIdStorage->contains($object)) {
-            return $this->objectIdStorage[$object];
+            return (integer)$this->objectIdStorage[$object];
         }
-        $cnt++;
-        $hash = (string) $cnt;
-        $this->objectIdStorage[$object] = $hash;
 
-        return $hash;
+        $node = $this->nodeFactory->newInstance($object, $meta);
+        $index = $this->addNode($node);
+        $this->objectIdStorage->attach($object, (string)$index);
+
+        return $index;
+    }
+
+    /**
+     * @param NodeInterface $node
+     *
+     * @return int
+     */
+    private function addNode(NodeInterface $node)
+    {
+        $this->nodeIndex++;
+        $this->graph['nodes'][] = $node->toArray();
+
+        return $this->nodeIndex;
     }
 }

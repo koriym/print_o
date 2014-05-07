@@ -10,30 +10,20 @@ return <<<EOT
         stroke-width: 1.5px;
     }
 
-    #bool {
-        fill: green;
-    }
-
     .link.object {
-        stroke: black;
-        stroke-width: 1.5px;
+        stroke: red;
+        stroke-width: 2.0px;
     }
 
     .link.array {
+        stroke: #fdff95;
+    }
+
+    .link.scalar {
+        stroke: gray;
         stroke-dasharray: 0,2 1;
     }
 
-    .link.double {
-        stroke-dasharray: 0,2 1;
-    }
-
-    .link.integer {
-        stroke-dasharray: 0,2 1;
-    }
-
-    .link.string {
-        stroke-dasharray: 0,2 1;
-    }
     circle {
         fill: #ccc;
         stroke: #333;
@@ -50,32 +40,23 @@ return <<<EOT
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
+    var list = {$list};
 
-    var links = {$links};
+    var width = window.innerWidth, height = window.innerHeight;
 
-    var nodes = {};
-
-    // Compute the distinct nodes from the links.
-    links.forEach(function(link) {
-        link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
-        link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
-    });
-
-    var width = 1000,
-         height = 1000;
 
     var force = d3.layout.force()
-            .nodes(d3.values(nodes))
-            .links(links)
+            .nodes(list.nodes)
+            .links(list.links)
             .size([width, height])
-            .linkDistance(260)
+            .linkDistance(160)
             .charge(-300)
             .on("tick", tick)
             .start();
 
     var svg = d3.select("body").append("svg")
-            .attr("width", "100%")
-            .attr("height", "100%");
+            .attr("width", width)
+            .attr("height", height);
 
     // Per-type markers, as they don't inherit styles.
     svg.append("defs").selectAll("marker")
@@ -100,7 +81,7 @@ return <<<EOT
     var circle = svg.append("g").selectAll("circle")
             .data(force.nodes())
             .enter().append("circle")
-            .attr("r", 10)
+            .attr("r", 7)
             .call(force.drag);
 
     var text = svg.append("g").selectAll("text")
@@ -108,13 +89,14 @@ return <<<EOT
             .enter().append("text")
             .attr("x", 8)
             .attr("y", ".31em")
-            .text(function(d) { return d.name; });
+            .text(decorateName);
 
     // Use elliptical arc path segments to doubly-encode directionality.
     function tick() {
         path.attr("d", linkArc);
         circle.attr("transform", transform);
         text.attr("transform", transform);
+
     }
 
     function linkArc(d) {
@@ -127,6 +109,23 @@ return <<<EOT
     function transform(d) {
         return "translate(" + d.x + "," + d.y + ")";
     }
+
+    function decorateName(d) {
+        if (typeof d.key !== "undefined") {
+            return d.key + ' => ' + d.name;
+        }
+        if (typeof d.prop !== "undefined") {
+            return '$' + d.prop + ' ' + d.name;
+        }
+        console.log(d);
+        return d.name;
+    }
+
+    window.onresize = function() {
+        width = window.innerWidth, height = window.innerHeight;
+        svg.attr('width', width).attr('height', height);
+        force.size([width, height]).resume();
+    };
 
 </script>
 EOT;
