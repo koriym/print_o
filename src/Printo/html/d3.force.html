@@ -1,7 +1,5 @@
-<?php
+<body></body><?php
 return <<<EOT
-<!DOCTYPE html>
-<meta charset="utf-8">
 <style>
 
     .link {
@@ -37,19 +35,16 @@ return <<<EOT
     }
 
 </style>
-<body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
     var list = {$list};
-
     var width = window.innerWidth, height = window.innerHeight;
-
 
     var force = d3.layout.force()
             .nodes(list.nodes)
             .links(list.links)
             .size([width, height])
-            .linkDistance(160)
+            .linkDistance(80)
             .charge(-300)
             .on("tick", tick)
             .start();

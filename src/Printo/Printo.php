@@ -38,12 +38,12 @@ class Printo
      */
     private $nodeFactory;
 
-    const CONFIG_OBJECT_IN_ARRAY = 1;
-    const CONFIG_ARRAY_IN_OBJECT = 2;
-    const CONFIG_ONLY_PUBLIC_PROPERTY = 4;
+    const CONFIG_PROPERTY = 1;
+    const CONFIG_ARRAY = 2;
+    const CONFIG_OBJECT_IN_ARRAY = 4;
     const CONFIG_ALL = 7;
 
-    private $config = 6;
+    private $config =3;
 
     /**
      * @param $object
@@ -64,21 +64,23 @@ class Printo
     public function setConfig($config)
     {
         $this->config = $config;
+
+        return $this;
     }
 
     public function __toString()
     {
         try {
             $this->addObject($this->object);
-            $list = json_encode($this->graph, JSON_PRETTY_PRINT);
+            $list = json_encode($this->graph);
 
             $html = require __DIR__ . '/html/d3.force.html';
 
             return $html;
         } catch (Exception $e) {
             echo $e;
-            exit;
             error_log($e);
+            exit;
         }
     }
 
@@ -94,9 +96,15 @@ class Printo
         }
     }
 
-    private function prop(\ReflectionProperty $prop, $object, $sourceIndex){
+    private function prop(\ReflectionProperty $prop, $object, $sourceIndex)
+    {
         $prop->setAccessible(true);
         $value = $prop->getValue($object);
+        $nonObjectProperty = (! is_object($value) && (! ($this->config & self::CONFIG_PROPERTY)));
+        if ($nonObjectProperty) {
+            return;
+        }
+
         /** @var $prop \ReflectionProperty */
         $meta = ['prop' => $prop->getName(), 'modifier' => $prop->getModifiers()];
         $targetIndex = $this->addGraphLink($sourceIndex, $value, $meta);
@@ -110,11 +118,15 @@ class Printo
 
     private function addArray($sourceIndex, array $array)
     {
+        if (! ($this->config & self::CONFIG_ARRAY)) {
+            return;
+        }
         foreach ($array as $key => $value) {
-            if (is_object($value)) {
+            if (is_object($value) && ($this->config & self::CONFIG_OBJECT_IN_ARRAY)) {
                 $this->addObject($value);
                 continue;
             }
+
             $targetIndex = $this->addGraphLink($sourceIndex, $value, ['key' => $key]);
             if (is_array($value)) {
                 $this->addArray($targetIndex, $value);
@@ -180,12 +192,12 @@ class Printo
     private function getObjectId($object, array $meta)
     {
         if ($this->objectIdStorage->contains($object)) {
-            return (integer)$this->objectIdStorage[$object];
+            return (integer) $this->objectIdStorage[$object];
         }
 
         $node = $this->nodeFactory->newInstance($object, $meta);
         $index = $this->addNode($node);
-        $this->objectIdStorage->attach($object, (string)$index);
+        $this->objectIdStorage->attach($object, (string) $index);
 
         return $index;
     }

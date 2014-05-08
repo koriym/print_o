@@ -22,11 +22,9 @@ final class Node implements NodeInterface
     private function getName($value)
     {
         if (is_object($value)) {
-
             return get_class($value);
         }
         if (is_array($value)) {
-
             return $this->getArrayName($value);
         }
 
@@ -55,7 +53,8 @@ final class Node implements NodeInterface
         if (is_int($value)) {
             return $value;
         }
-        $name = sprintf('(%s) %s', gettype($value), (string)$value);
+        $name = sprintf('(%s) %s', gettype($value), (string) $value);
+
         return $name;
     }
 }
