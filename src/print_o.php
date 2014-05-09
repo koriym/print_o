@@ -1,6 +1,6 @@
 <?php
 
-use Printo\Printo;
+use Koriym\Printo\Printo;
 
 /**
  * Print object graph

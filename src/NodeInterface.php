@@ -1,5 +1,5 @@
 <?php
-namespace Printo;
+namespace Koriym\Printo;
 
 interface NodeInterface
 {

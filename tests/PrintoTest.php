@@ -1,6 +1,6 @@
 <?php
 
-namespace Printo;
+namespace Koriym\Printo;
 
 use DateTime;
 
@@ -43,8 +43,7 @@ class PrintoTest extends \PHPUnit_Framework_TestCase
 
     public function test_New()
     {
-        $actual = $this->printo;
-        $this->assertInstanceOf('\Printo\Printo', $this->printo);
+        $this->assertInstanceOf('\Koriym\Printo\Printo', $this->printo);
     }
 
     public function test_toString()

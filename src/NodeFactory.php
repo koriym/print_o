@@ -1,5 +1,5 @@
 <?php
-namespace Printo;
+namespace Koriym\Printo;
 
 final class NodeFactory implements NodeFactoryInterface
 {

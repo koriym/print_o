@@ -1,5 +1,5 @@
 {
-    "name": "printo/printo",
+    "name": "koriym/printo",
     "description": "An object graph visualizer.",
     "keywords": ["debug", "object graph"],
     "homepage": "https://github.com/koriym/print_o",
@@ -15,8 +15,8 @@
         "php": ">=5.4.0"
     },
     "autoload": {
-        "psr-0":{
-            "Printo\\":"src/"
+        "psr-4":{
+            "Koriym\\Printo\\": "src/"
         },
         "files": [
             "src/print_o.php"
