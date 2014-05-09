@@ -30,6 +30,8 @@ print_o($object);
 
 //or 
 
+use Koriym\Printo\Printo;
+
 echo (new Printo($object))
     ->setRange(Printo::RANGE_PROPERTY)
     ->setLinkDistance(130)
