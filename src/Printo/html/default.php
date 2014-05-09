@@ -1,4 +1,4 @@
-<body></body><?php
+<?php
 return <<<EOT
 <style>
 
@@ -35,6 +35,7 @@ return <<<EOT
     }
 
 </style>
+<body></body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
     var list = {$list};
@@ -44,8 +45,8 @@ return <<<EOT
             .nodes(list.nodes)
             .links(list.links)
             .size([width, height])
-            .linkDistance(80)
-            .charge(-300)
+            .linkDistance({$linkDistance})
+            .charge({$charge})
             .on("tick", tick)
             .start();
 
@@ -112,7 +113,6 @@ return <<<EOT
         if (typeof d.prop !== "undefined") {
             return '$' + d.prop + ' ' + d.name;
         }
-        console.log(d);
         return d.name;
     }
 

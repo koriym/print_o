@@ -1,15 +1,11 @@
 <?php
 /**
- * Printo
+ * PHP Object graph visualizer
  *
  * @package Printo
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
 namespace Printo;
-
-use Exception;
-use ReflectionObject;
-use RuntimeException;
 
 class Printo
 {
@@ -31,6 +27,9 @@ class Printo
         'links' => []
     ];
 
+    /**
+     * @var int
+     */
     private $nodeIndex = -1;
 
     /**
@@ -38,17 +37,28 @@ class Printo
      */
     private $nodeFactory;
 
-    const CONFIG_PROPERTY = 1;
-    const CONFIG_ARRAY = 2;
-    const CONFIG_OBJECT_IN_ARRAY = 4;
-    const CONFIG_ALL = 7;
-
-    private $config =3;
+    /**
+     * @var int
+     */
+    private $linkDistance = 100;
 
     /**
-     * @param $object
-     *
-     * @throws RuntimeException
+     * @var int
+     */
+    private $charge = -300;
+
+    const RANGE_PROPERTY = 1;
+    const RANGE_ARRAY = 2;
+    const RANGE_OBJECT_IN_ARRAY = 4;
+
+    const RANGE_OBJECT_ONLY = 0;
+    const RANGE_ALL = 7;
+
+    private $range = 3;
+
+    /**
+     * @param object               $object
+     * @param NodeFactoryInterface $nodeFactory
      */
     public function __construct($object, NodeFactoryInterface $nodeFactory = null)
     {
@@ -61,27 +71,46 @@ class Printo
         $this->nodeFactory = $nodeFactory ?: new NodeFactory;
     }
 
-    public function setConfig($config)
+    /**
+     * @param $range
+     *
+     * @return $this
+     */
+    public function setRange($range)
     {
-        $this->config = $config;
+        $this->range = $range;
+
+        return $this;
+    }
+
+    /**
+     * @param $linkDistance
+     *
+     * @return $this
+     */
+    public function setLinkDistance($linkDistance)
+    {
+        $this->linkDistance = $linkDistance;
+
+        return $this;
+    }
+
+    public function setCharge($charge)
+    {
+        $this->charge = $charge;
 
         return $this;
     }
 
     public function __toString()
     {
-        try {
-            $this->addObject($this->object);
-            $list = json_encode($this->graph);
+        $this->addObject($this->object);
+        $list = json_encode($this->graph);
+        $linkDistance = $this->linkDistance;
+        $charge = $this->charge;
+        $html = require __DIR__ . '/html/default.php';
 
-            $html = require __DIR__ . '/html/d3.force.html';
-
-            return $html;
-        } catch (Exception $e) {
-            echo $e;
-            error_log($e);
-            exit;
-        }
+        return $html;
     }
 
     private function addObject($object)
@@ -100,11 +129,10 @@ class Printo
     {
         $prop->setAccessible(true);
         $value = $prop->getValue($object);
-        $nonObjectProperty = (! is_object($value) && (! ($this->config & self::CONFIG_PROPERTY)));
+        $nonObjectProperty = (! is_object($value) && (! ($this->range & self::RANGE_PROPERTY)));
         if ($nonObjectProperty) {
             return;
         }
-
         /** @var $prop \ReflectionProperty */
         $meta = ['prop' => $prop->getName(), 'modifier' => $prop->getModifiers()];
         $targetIndex = $this->addGraphLink($sourceIndex, $value, $meta);
@@ -118,11 +146,11 @@ class Printo
 
     private function addArray($sourceIndex, array $array)
     {
-        if (! ($this->config & self::CONFIG_ARRAY)) {
+        if (! ($this->range & self::RANGE_ARRAY)) {
             return;
         }
         foreach ($array as $key => $value) {
-            if (is_object($value) && ($this->config & self::CONFIG_OBJECT_IN_ARRAY)) {
+            if (is_object($value) && ($this->range & self::RANGE_OBJECT_IN_ARRAY)) {
                 $this->addObject($value);
                 continue;
             }
@@ -176,6 +204,7 @@ class Printo
     private function getTargetIndex($value, array $meta)
     {
         if (is_object($value)) {
+
             return $this->getObjectId($value, $meta);
         }
         $node = $this->nodeFactory->newInstance($value, $meta);
@@ -192,6 +221,7 @@ class Printo
     private function getObjectId($object, array $meta)
     {
         if ($this->objectIdStorage->contains($object)) {
+
             return (integer) $this->objectIdStorage[$object];
         }
 
