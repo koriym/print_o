@@ -23,12 +23,17 @@
 
 ### Usage
 
-print_o() displays information about a object graph and variable in a way that's readable by humans.
 
 ```php
-<?php
 
-print_o($obj);
+print_o($object);
+
+//or 
+
+echo (new Printo($object))
+    ->setRange(Printo::RANGE_PROPERTY)
+    ->setLinkDistance(130)
+    ->setCharge(-500);
 ```
 
 ### Live demo
