@@ -45,7 +45,7 @@ final class Node implements NodeInterface
             return get_class($value);
         }
         if (is_array($value)) {
-            return $this->getArrayName($value);
+            return $this->getArrayName();
         }
 
         return $this->getScalarName($value);
@@ -56,7 +56,7 @@ final class Node implements NodeInterface
      *
      * @return string
      */
-    private function getArrayName(array $array)
+    private function getArrayName()
     {
         $name = 'array';
 
