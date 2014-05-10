@@ -84,13 +84,13 @@ class Printo
      */
     public function __construct($object, NodeFactoryInterface $nodeFactory = null)
     {
-        if (!is_object($object)) {
-            throw new \LogicException('Object only: ' . gettype($object));
-        }
         $this->object = $object;
         $this->objectIdStorage = new \SplObjectStorage;
         $this->sourceObjectStorage = new \SplObjectStorage;
         $this->nodeFactory = $nodeFactory ?: new NodeFactory;
+        if (is_array($this->object)) {
+            $this->linkDistance = 200;
+        }
     }
 
     /**
@@ -131,7 +131,13 @@ class Printo
 
     public function __toString()
     {
-        $this->addObject($this->object);
+        if (is_object($this->object)) {
+            $this->addObject($this->object);
+        }
+        if (is_array($this->object)) {
+            $this->addArray(0, $this->object);
+        }
+
         $list = json_encode($this->graph);
         $linkDistance = $this->linkDistance;
         $charge = $this->charge;
