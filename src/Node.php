@@ -52,7 +52,6 @@ final class Node implements NodeInterface
     }
 
     /**
-     * @param array $array
      *
      * @return string
      */
