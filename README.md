@@ -24,6 +24,16 @@
 ### Requirements
  * PHP 5.4+
 
+### Installation
+
+```javascript
+{
+    "require-dev": {
+        "koriym/printo": "1.*@dev"
+    }
+}
+```
+
 ### Usage
 
 
