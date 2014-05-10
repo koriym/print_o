@@ -16,10 +16,10 @@
 ![only object](http://koriym.github.io/print_o/v1/img/object.png)
 
 #### With properties
-![only object](http://koriym.github.io/print_o/v1/img/prop.png)
+![+property](http://koriym.github.io/print_o/v1/img/prop.png)
 
 #### Full extract
-![only object](http://koriym.github.io/print_o/v1/img/full.png)
+![+array](http://koriym.github.io/print_o/v1/img/full.png)
 
 ### Requirements
  * PHP 5.4+
@@ -43,4 +43,7 @@ echo (new Printo($object))
 
 ### Live demo
 
- * [BEAR.Resource](http://koriym.github.io/print_o/v1/libs/bear.resource.html)
+ * [Aura.Framework_Project](http://koriym.github.io/print_o/v1/libs/bear.resource.html) [![github](http://koriym.github.io/print_o/images/gh.png)](https://github.com/auraphp/Aura.Framework_Project)
+
+ * [BEAR.Sunday](http://koriym.github.io/print_o/v1/libs/bear.sunday.html) [![github](http://koriym.github.io/print_o/images/gh.png)](https://github.com/koriym/BEAR.Sunday)
+
