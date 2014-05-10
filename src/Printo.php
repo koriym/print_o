@@ -79,6 +79,11 @@ class Printo
     private $range = 3;
 
     /**
+     * @var object
+     */
+    private $object;
+
+    /**
      * @param object               $object
      * @param NodeFactoryInterface $nodeFactory
      */

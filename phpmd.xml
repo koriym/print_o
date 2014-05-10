@@ -30,7 +30,6 @@
     <rule ref="rulesets/unusedcode.xml/UnusedPrivateField" />
     <rule ref="rulesets/unusedcode.xml/UnusedPrivateMethod" />
     <!--controversial-->
-    <rule ref="rulesets/controversial.xml/Superglobals" />
     <rule ref="rulesets/controversial.xml/CamelCaseClassName" />
     <rule ref="rulesets/controversial.xml/CamelCasePropertyName" />
     <rule ref="rulesets/controversial.xml/CamelCaseMethodName" />
