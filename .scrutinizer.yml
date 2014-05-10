@@ -1,0 +1,23 @@
+filter:
+    paths: [src/*]
+
+before_commands:
+    - 'composer install --dev --prefer-source'
+
+tools:
+    php_mess_detector:
+        enabled: true
+        config:
+            ruleset: ./phpmd.xml
+    php_code_sniffer:
+        enabled: true
+        config:
+            ruleset: ./phpcs.xml
+    php_cpd:
+        enabled: true
+        excluded_dirs: [docs/*, vendor/*, tests/*]
+    php_loc: true
+    php_pdepend: true
+    php_analyzer: true
+    sensiolabs_security_checker: true
+    external_code_coverage: true
