@@ -61,4 +61,13 @@ class PrintoTest extends \PHPUnit_Framework_TestCase
         $html = (string) (new Printo(['a' => ['b' => [1, 2, 3]]]));
         $this->assertContains('"nodes":[{"key":"a","name":"array"},{"key":"b","name":"array"},{"key":0,"name":1},{"key":1,"name":2},{"key":2,"name":3}]', $html);
     }
+
+    public function testFunction()
+    {
+        $this->assertTrue(function_exists('print_o'));
+        ob_start();
+        print_o($_SERVER);
+        $ob = ob_get_clean();
+        $this->assertInternalType('string', $ob);
+    }
 }
