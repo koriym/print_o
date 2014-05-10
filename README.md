@@ -43,7 +43,7 @@ echo (new Printo($object))
 
 ### Live demo
 
- * [Aura.Framework_Project](http://koriym.github.io/print_o/v1/libs/bear.resource.html) [![github](http://koriym.github.io/print_o/images/gh.png)](https://github.com/auraphp/Aura.Framework_Project)
+ * [Aura.Framework_Project](http://koriym.github.io/print_o/v1/libs/aura.framework_project.html) [![github](http://koriym.github.io/print_o/images/gh.png)](https://github.com/auraphp/Aura.Framework_Project)
 
  * [BEAR.Sunday](http://koriym.github.io/print_o/v1/libs/bear.sunday.html) [![github](http://koriym.github.io/print_o/images/gh.png)](https://github.com/koriym/BEAR.Sunday)
 
