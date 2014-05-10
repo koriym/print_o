@@ -1,5 +1,6 @@
 filter:
     paths: [src/*]
+    excluded_paths: [tests/*, vendor/*]
 
 before_commands:
     - 'composer install --dev --prefer-source'
@@ -13,11 +14,14 @@ tools:
         enabled: true
         config:
             ruleset: ./phpcs.xml
+    php_analyzer:
+        enabled: true
     php_cpd:
         enabled: true
-        excluded_dirs: [docs/*, vendor/*, tests/*]
-    php_loc: true
-    php_pdepend: true
-    php_analyzer: true
-    sensiolabs_security_checker: true
+    php_loc:
+        enabled: true
+        excluded_dirs:
+            - build
+            - tests
+            - vendor
     external_code_coverage: true
