@@ -1,17 +1,32 @@
 <?php
+
 namespace Koriym\Printo;
 
 final class Node implements NodeInterface
 {
+    /**
+     * @var
+     */
     private $value;
+
+    /**
+     * @var array
+     */
     private $meta = [];
 
+    /**
+     * @param       $value
+     * @param array $meta
+     */
     public function __construct($value, array $meta)
     {
         $this->value = $value;
         $this->meta = $meta;
     }
 
+    /**
+     * @return array
+     */
     public function toArray()
     {
         $array = $this->meta + ['name' => $this->getName($this->value)];
@@ -19,6 +34,11 @@ final class Node implements NodeInterface
         return $array;
     }
 
+    /**
+     * @param $value
+     *
+     * @return string
+     */
     private function getName($value)
     {
         if (is_object($value)) {
@@ -31,6 +51,11 @@ final class Node implements NodeInterface
         return $this->getScalarName($value);
     }
 
+    /**
+     * @param array $array
+     *
+     * @return string
+     */
     private function getArrayName(array $array)
     {
         $name = 'array';
@@ -38,6 +63,11 @@ final class Node implements NodeInterface
         return $name;
     }
 
+    /**
+     * @param $value
+     *
+     * @return string
+     */
     private function getScalarName($value)
     {
         if (is_bool($value)) {
