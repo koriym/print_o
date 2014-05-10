@@ -156,7 +156,7 @@ class Printo
             }
 
             $targetIndex = $this->addGraphLink($sourceIndex, $value, ['key' => $key]);
-            if (is_array($value)) {
+            if (is_array($value) && $value !== $GLOBALS) {
                 $this->addArray($targetIndex, $value);
             }
         }
