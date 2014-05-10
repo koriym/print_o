@@ -1,9 +1,7 @@
 {
-    "name": "printo/printo",
-    "type": "library",
+    "name": "koriym/printo",
     "description": "An object graph visualizer.",
-    "version": "0.1",
-    "keywords": ["debug", "object"],
+    "keywords": ["debug", "var_dump"],
     "homepage": "https://github.com/koriym/print_o",
     "license": "BSD-3-Clause",
     "authors": [
@@ -16,15 +14,17 @@
     "require": {
         "php": ">=5.4.0"
     },
-    "support": {
-        "issues": "https://github.com/koriym/print_o/issues",
-        "source": "https://github.com/koriym/print_o"
-    },
     "autoload": {
-        "classmap": [
-            "src/Printo/Printo.php",
-            "src/Printo/print_o.php"
+        "psr-4":{
+            "Koriym\\Printo\\": "src/"
+        },
+        "files": [
+            "src/print_o.php"
         ]
     },
-    "minimum-stability": "dev"
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
 }

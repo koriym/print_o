@@ -1,0 +1,17 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+  - 5.6
+
+before_install:
+ - composer selfupdate
+ - composer install
+ - wget https://scrutinizer-ci.com/ocular.phar
+
+script:
+ - phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_script:
+ - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
