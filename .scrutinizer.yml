@@ -1,6 +1,6 @@
 filter:
     paths: [src/*]
-    excluded_paths: [tests/*, vendor/*]
+    excluded_paths: [tests/*, vendor/*, src/print_o.php]
 
 before_commands:
     - 'composer install --dev --prefer-source'
