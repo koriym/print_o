@@ -47,13 +47,35 @@ class Printo
      */
     private $charge = -300;
 
+    /**
+     * Extract object properties
+     */
     const RANGE_PROPERTY = 1;
+
+    /**
+     * Extract array
+     */
     const RANGE_ARRAY = 2;
+
+    /**
+     * Extract object in array
+     */
     const RANGE_OBJECT_IN_ARRAY = 4;
 
+    /**
+     * Only object graph
+     */
     const RANGE_OBJECT_ONLY = 0;
+
+    /**
+     * Extract all
+     */
     const RANGE_ALL = 7;
 
+    /**
+     * Default range is RANGE_PROPERTY | RANGE_ARRAY
+     * @var int
+     */
     private $range = 3;
 
     /**
@@ -95,6 +117,11 @@ class Printo
         return $this;
     }
 
+    /**
+     * @param $charge
+     *
+     * @return $this
+     */
     public function setCharge($charge)
     {
         $this->charge = $charge;
@@ -113,6 +140,9 @@ class Printo
         return $html;
     }
 
+    /**
+     * @param $object
+     */
     private function addObject($object)
     {
         $this->sourceObjectStorage->attach($object);
@@ -125,6 +155,11 @@ class Printo
         }
     }
 
+    /**
+     * @param \ReflectionProperty $prop
+     * @param object              $object
+     * @param int                 $sourceIndex
+     */
     private function prop(\ReflectionProperty $prop, $object, $sourceIndex)
     {
         $prop->setAccessible(true);
@@ -144,6 +179,10 @@ class Printo
         }
     }
 
+    /**
+     * @param int   $sourceIndex
+     * @param array $array
+     */
     private function addArray($sourceIndex, array $array)
     {
         if (! ($this->range & self::RANGE_ARRAY)) {
