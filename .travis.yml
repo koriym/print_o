@@ -12,7 +12,6 @@ before_install:
 
 script:
  - phpunit --coverage-text --coverage-clover=coverage.clover
- - php tests/bin/run.php
 
 after_script:
  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
