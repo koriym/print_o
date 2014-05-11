@@ -1,6 +1,7 @@
 # print_o
 ## An object graph visualizer for PHP
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/koriym/print_o/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/koriym/print_o/?branch=develop)
 [![Build Status](https://travis-ci.org/koriym/print_o.svg?branch=develop)](https://travis-ci.org/koriym/print_o)
 [![Code Coverage](https://scrutinizer-ci.com/g/koriym/print_o/badges/coverage.png?s=4cd2f4b0eab93564a849a2b662aac28091c1d8d8)](https://scrutinizer-ci.com/g/koriym/print_o/)
 
