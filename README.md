@@ -30,7 +30,7 @@
 ```javascript
 {
     "require-dev": {
-        "koriym/printo": "1.*@dev"
+        "koriym/printo": "~1.0"
     }
 }
 ```
