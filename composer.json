@@ -7,8 +7,7 @@
     "authors": [
         {
             "name": "Akihito Koriyama",
-            "email": "akihito.koriyama@gmail.com",
-            "homepage": "https://github.com/koriym"
+            "email": "akihito.koriyama@gmail.com"
         }
     ],
     "require": {
@@ -17,14 +16,11 @@
     "autoload": {
         "psr-4":{
             "Koriym\\Printo\\": "src/"
-        },
+        }
+    },
+    "autoload-dev": {
         "files": [
             "src/print_o.php"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
     }
 }
