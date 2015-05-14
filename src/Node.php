@@ -52,7 +52,6 @@ final class Node implements NodeInterface
     }
 
     /**
-     *
      * @return string
      */
     private function getArrayName()

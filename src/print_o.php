@@ -9,5 +9,5 @@ use Koriym\Printo\Printo;
  */
 function print_o($object)
 {
-    echo (new Printo($object));
+    echo(new Printo($object));
 }

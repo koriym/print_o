@@ -2,7 +2,6 @@
 /**
  * PHP Object graph visualizer
  *
- * @package Printo
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
 namespace Koriym\Printo;
@@ -74,6 +73,7 @@ class Printo
 
     /**
      * Default range is RANGE_PROPERTY | RANGE_ARRAY
+     *
      * @var int
      */
     private $range = 3;
@@ -179,7 +179,7 @@ class Printo
         if ($nonObjectProperty) {
             return;
         }
-        /** @var $prop \ReflectionProperty */
+        /* @var $prop \ReflectionProperty */
         $meta = ['prop' => $prop->getName(), 'modifier' => $prop->getModifiers()];
         $targetIndex = $this->addGraphLink($sourceIndex, $value, $meta);
         if (is_object($value) && !$this->sourceObjectStorage->contains($value)) {
@@ -254,7 +254,6 @@ class Printo
     private function getTargetIndex($value, array $meta)
     {
         if (is_object($value)) {
-
             return $this->getObjectId($value, $meta);
         }
         $node = $this->nodeFactory->newInstance($value, $meta);
@@ -271,7 +270,6 @@ class Printo
     private function getObjectId($object, array $meta)
     {
         if ($this->objectIdStorage->contains($object)) {
-
             return (integer) $this->objectIdStorage[$object];
         }
 
