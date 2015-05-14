@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * koriym/print_o
+ *
+ * @license http://opensource.org/licenses/bsd-license.php MIT
+ */
 namespace Koriym\Printo;
 
 final class Node implements NodeInterface

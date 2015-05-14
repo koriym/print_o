@@ -2,7 +2,7 @@
 /**
  * PHP Object graph visualizer
  *
- * @license http://opensource.org/licenses/bsd-license.php BSD
+ * @license http://opensource.org/licenses/bsd-license.php MIT
  */
 namespace Koriym\Printo;
 

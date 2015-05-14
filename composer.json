@@ -3,7 +3,7 @@
     "description": "An object graph visualizer.",
     "keywords": ["debug", "var_dump"],
     "homepage": "https://github.com/koriym/print_o",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "authors": [
         {
             "name": "Akihito Koriyama",
