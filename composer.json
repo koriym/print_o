@@ -3,12 +3,11 @@
     "description": "An object graph visualizer.",
     "keywords": ["debug", "var_dump"],
     "homepage": "https://github.com/koriym/print_o",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "authors": [
         {
             "name": "Akihito Koriyama",
-            "email": "akihito.koriyama@gmail.com",
-            "homepage": "https://github.com/koriym"
+            "email": "akihito.koriyama@gmail.com"
         }
     ],
     "require": {
@@ -17,14 +16,11 @@
     "autoload": {
         "psr-4":{
             "Koriym\\Printo\\": "src/"
-        },
+        }
+    },
+    "autoload-dev": {
         "files": [
             "src/print_o.php"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
     }
 }
