@@ -5,7 +5,7 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/koriym/print_o/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/koriym/print_o/?branch=1.x)
 [![Build Status](https://travis-ci.org/koriym/print_o.svg?branch=1.x)](https://travis-ci.org/koriym/print_o)
 [![Code Coverage](https://scrutinizer-ci.com/g/koriym/print_o/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/koriym/print_o/?branch=1.x)
-![object graph](http://koriym.github.io/Koriym.Printo/v1/img/big.png)
+![object graph](http://koriym.github.io/print_o/v1/img/big.png)
 
 ### What is object graph ?
 
