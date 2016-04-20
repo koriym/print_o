@@ -36,7 +36,7 @@ return <<<EOT
 
 </style>
 <body></body>
-<script src="http://koriym.github.io/print_o/d3/3.4.13/d3.min.js"></script>
+<script src="//koriym.github.io/print_o/d3/3.4.13/d3.min.js"></script>
 <script>
     var list = {$list};
     var width = window.innerWidth, height = window.innerHeight;
