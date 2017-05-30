@@ -22,5 +22,8 @@
         "files": [
             "src/print_o.php"
         ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
     }
 }
