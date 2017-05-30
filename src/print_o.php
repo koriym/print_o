@@ -1,8 +1,8 @@
 <?php
 /**
- * koriym/print_o
+ * This file is part of the koriym/printo package.
  *
- * @license http://opensource.org/licenses/bsd-license.php MIT
+ * @license http://opensource.org/licenses/MIT MIT
  */
 use Koriym\Printo\Printo;
 
@@ -13,5 +13,5 @@ use Koriym\Printo\Printo;
  */
 function print_o($object)
 {
-    echo(new Printo($object));
+    echo new Printo($object);
 }

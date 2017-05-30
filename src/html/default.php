@@ -1,4 +1,9 @@
 <?php
+/**
+ * This file is part of the koriym/printo package.
+ *
+ * @license http://opensource.org/licenses/MIT MIT
+ */
 return <<<EOT
 <style>
 

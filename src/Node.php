@@ -1,8 +1,8 @@
 <?php
 /**
- * koriym/print_o
+ * This file is part of the koriym/printo package.
  *
- * @license http://opensource.org/licenses/bsd-license.php MIT
+ * @license http://opensource.org/licenses/MIT MIT
  */
 namespace Koriym\Printo;
 
@@ -75,7 +75,7 @@ final class Node implements NodeInterface
         if (is_bool($value)) {
             return $value ? 'true' : 'false';
         }
-        if (is_null($value)) {
+        if ($value === null) {
             return 'null';
         }
 

@@ -1,12 +1,16 @@
 <?php
-
+/**
+ * This file is part of the koriym/printo package.
+ *
+ * @license http://opensource.org/licenses/MIT MIT
+ */
 namespace Koriym\Printo\Mock;
 
 class FirstGraph
 {
-    private $message;
-    protected $array;
     public $dependency;
+    protected $array;
+    private $message;
 
     public function __construct()
     {

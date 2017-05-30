@@ -1,13 +1,37 @@
 <?php
 /**
- * PHP Object graph visualizer
+ * This file is part of the koriym/printo package.
  *
- * @license http://opensource.org/licenses/bsd-license.php MIT
+ * @license http://opensource.org/licenses/MIT MIT
  */
 namespace Koriym\Printo;
 
 class Printo
 {
+    /**
+     * Extract object properties
+     */
+    const RANGE_PROPERTY = 1;
+
+    /**
+     * Extract array
+     */
+    const RANGE_ARRAY = 2;
+
+    /**
+     * Extract object in array
+     */
+    const RANGE_OBJECT_IN_ARRAY = 4;
+
+    /**
+     * Only object graph
+     */
+    const RANGE_OBJECT_ONLY = 0;
+
+    /**
+     * Extract all
+     */
+    const RANGE_ALL = 7;
     /**
      * @var \SplObjectStorage
      */
@@ -47,31 +71,6 @@ class Printo
     private $charge = -300;
 
     /**
-     * Extract object properties
-     */
-    const RANGE_PROPERTY = 1;
-
-    /**
-     * Extract array
-     */
-    const RANGE_ARRAY = 2;
-
-    /**
-     * Extract object in array
-     */
-    const RANGE_OBJECT_IN_ARRAY = 4;
-
-    /**
-     * Only object graph
-     */
-    const RANGE_OBJECT_ONLY = 0;
-
-    /**
-     * Extract all
-     */
-    const RANGE_ALL = 7;
-
-    /**
      * Default range is RANGE_PROPERTY | RANGE_ARRAY
      *
      * @var int
@@ -96,6 +95,23 @@ class Printo
         if (is_array($this->object)) {
             $this->linkDistance = 200;
         }
+    }
+
+    public function __toString()
+    {
+        if (is_object($this->object)) {
+            $this->addObject($this->object);
+        }
+        if (is_array($this->object)) {
+            $this->addArray(0, $this->object);
+        }
+
+        $list = json_encode($this->graph);
+        $linkDistance = $this->linkDistance;
+        $charge = $this->charge;
+        $html = require __DIR__ . '/html/default.php';
+
+        return $html;
     }
 
     /**
@@ -134,23 +150,6 @@ class Printo
         return $this;
     }
 
-    public function __toString()
-    {
-        if (is_object($this->object)) {
-            $this->addObject($this->object);
-        }
-        if (is_array($this->object)) {
-            $this->addArray(0, $this->object);
-        }
-
-        $list = json_encode($this->graph);
-        $linkDistance = $this->linkDistance;
-        $charge = $this->charge;
-        $html = require __DIR__ . '/html/default.php';
-
-        return $html;
-    }
-
     /**
      * @param $object
      */
@@ -182,7 +181,7 @@ class Printo
         /* @var $prop \ReflectionProperty */
         $meta = ['prop' => $prop->getName(), 'modifier' => $prop->getModifiers()];
         $targetIndex = $this->addGraphLink($sourceIndex, $value, $meta);
-        if (is_object($value) && !$this->sourceObjectStorage->contains($value)) {
+        if (is_object($value) && ! $this->sourceObjectStorage->contains($value)) {
             $this->addObject($value);
         }
         if (is_array($value)) {
@@ -270,7 +269,7 @@ class Printo
     private function getObjectId($object, array $meta)
     {
         if ($this->objectIdStorage->contains($object)) {
-            return (integer) $this->objectIdStorage[$object];
+            return (int) $this->objectIdStorage[$object];
         }
 
         $node = $this->nodeFactory->newInstance($object, $meta);
