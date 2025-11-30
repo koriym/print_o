@@ -1,6 +1,6 @@
 # print_o
 
-An object graph visualizer for PHP
+## An object graph visualizer for PHP
 
 **print_o** visualizes PHP object graphs as interactive diagrams, making it easy to understand complex object relationships in your application.
 
