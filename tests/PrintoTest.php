@@ -6,11 +6,11 @@
  */
 namespace Koriym\Printo;
 
-class PrintoTest extends \PHPUnit_Framework_TestCase
+class PrintoTest extends \PHPUnit\Framework\TestCase
 {
     protected $Printo;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->printo = new Printo(new Mock\FirstGraph);
@@ -24,7 +24,7 @@ class PrintoTest extends \PHPUnit_Framework_TestCase
     public function testString()
     {
         $actual = (string) $this->printo;
-        $this->assertInternalType('string', $actual);
+        $this->assertIsString($actual);
     }
 
     public function testSetRange()
@@ -72,6 +72,6 @@ class PrintoTest extends \PHPUnit_Framework_TestCase
         ob_start();
         print_o($_SERVER);
         $ob = ob_get_clean();
-        $this->assertInternalType('string', $ob);
+        $this->assertIsString($ob);
     }
 }
