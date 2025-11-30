@@ -37,13 +37,13 @@ class PrintoTest extends \PHPUnit\Framework\TestCase
     public function testSetLinkDistance()
     {
         $html = (string) (new Printo(new Mock\FirstGraph))->setLinkDistance(999);
-        $this->assertContains('.linkDistance(999)', $html);
+        $this->assertStringContainsString('.linkDistance(999)', $html);
     }
 
     public function testSetCharge()
     {
         $html = (string) (new Printo(new Mock\FirstGraph))->setCharge(999);
-        $this->assertContains('.charge(999)', $html);
+        $this->assertStringContainsString('.charge(999)', $html);
     }
 
     public function testRangeNoArray()
@@ -63,7 +63,7 @@ class PrintoTest extends \PHPUnit\Framework\TestCase
     public function testInputArray()
     {
         $html = (string) (new Printo(['a' => ['b' => [1, 2, 3]]]));
-        $this->assertContains('"nodes":[{"key":"a","name":"array"},{"key":"b","name":"array"},{"key":0,"name":1},{"key":1,"name":2},{"key":2,"name":3}]', $html);
+        $this->assertStringContainsString('"nodes":[{"key":"a","name":"array"},{"key":"b","name":"array"},{"key":0,"name":1},{"key":1,"name":2},{"key":2,"name":3}]', $html);
     }
 
     public function testFunction()
