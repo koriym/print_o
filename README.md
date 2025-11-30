@@ -1,10 +1,21 @@
 # print_o
 
-## An object graph visualizer for PHP
+An object graph visualizer for PHP
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/koriym/print_o/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/koriym/print_o/?branch=1.x)
-[![Build Status](https://travis-ci.org/koriym/print_o.svg?branch=1.x)](https://travis-ci.org/koriym/print_o)
-[![Code Coverage](https://scrutinizer-ci.com/g/koriym/print_o/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/koriym/print_o/?branch=1.x)
+**print_o** visualizes PHP object graphs as interactive diagrams, making it easy to understand complex object relationships in your application.
+
+## Features
+
+- Visual representation of object relationships
+- Interactive graph with configurable properties
+- Support for different visualization ranges (objects only, with properties, or full details)
+
+## Quick Start
+
+```php
+print_o($object);
+```
+
 ![object graph](http://koriym.github.io/print_o/v1/img/big.png)
 
 ### What is object graph ?
@@ -27,12 +38,8 @@
 
 ### Installation
 
-```javascript
-{
-    "require-dev": {
-        "koriym/printo": "~1.0"
-    }
-}
+```bash
+composer require --dev koriym/printo
 ```
 
 ### Usage
