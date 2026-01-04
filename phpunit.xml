@@ -2,22 +2,17 @@
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="tests/bootstrap.php"
-         colors="true">
+         colors="true"
+         failOnWarning="false"
+         failOnDeprecation="false">
   <testsuites>
     <testsuite name="Test Suite">
       <directory suffix="Test.php">tests</directory>
     </testsuite>
   </testsuites>
-  <coverage>
+  <source>
     <include>
       <directory suffix=".php">src</directory>
     </include>
-    <report>
-      <html outputDirectory="build/coverage"/>
-      <clover outputFile="build/logs/clover.xml"/>
-    </report>
-  </coverage>
-  <logging>
-    <junit outputFile="build/logs/junit.xml"/>
-  </logging>
+  </source>
 </phpunit>
