@@ -86,7 +86,7 @@ class Printo
      * @param object               $object
      * @param NodeFactoryInterface $nodeFactory
      */
-    public function __construct($object, NodeFactoryInterface $nodeFactory = null)
+    public function __construct($object, ?NodeFactoryInterface $nodeFactory = null)
     {
         $this->object = $object;
         $this->objectIdStorage = new \SplObjectStorage;

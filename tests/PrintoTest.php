@@ -8,7 +8,7 @@ namespace Koriym\Printo;
 
 class PrintoTest extends \PHPUnit\Framework\TestCase
 {
-    protected $Printo;
+    protected $printo;
 
     protected function setUp(): void
     {
@@ -29,9 +29,9 @@ class PrintoTest extends \PHPUnit\Framework\TestCase
 
     public function testSetRange()
     {
-        $html = (string) (new Printo(new Mock\FirstGraph));
-        $htmlArray = (string) (new Printo(new Mock\FirstGraph))->setRange(Printo::RANGE_ALL);
-        $this->assertTrue(strlen($htmlArray) > strlen($html));
+        $htmlObjectOnly = (string) (new Printo(new Mock\FirstGraph))->setRange(Printo::RANGE_OBJECT_ONLY);
+        $htmlAll = (string) (new Printo(new Mock\FirstGraph))->setRange(Printo::RANGE_ALL);
+        $this->assertGreaterThan(strlen($htmlObjectOnly), strlen($htmlAll));
     }
 
     public function testSetLinkDistance()

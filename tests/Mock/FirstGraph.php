@@ -9,6 +9,7 @@ namespace Koriym\Printo\Mock;
 class FirstGraph
 {
     public $dependency;
+    public $service;
     protected $array;
     private $message;
 
